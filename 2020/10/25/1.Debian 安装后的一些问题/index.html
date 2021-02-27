@@ -15,21 +15,21 @@
   
     <meta name="keywords" content="Linux" />
   
-  <meta name="description" content="写在前面我个人最常用的 Linux 发行版是 debian，因为我觉得它比 Ubuntu 更轻量更稳定更高效。因为每次装完系统都需要更换镜像源，还有其他乱七八糟的事情，所以把过程中的一些问题总结在这里。 apt 更换国内源 镜像源文件为：  1&#x2F;etc&#x2F;apt&#x2F;sources.list 国内常用镜像源：  12345678deb http:&#x2F;&#x2F;mi">
+  <meta name="description" content="写在前面我个人最常用的 Linux 发行版是 debian，因为我觉得它比 Ubuntu 更轻量更稳定更高效。因为每次装完系统都需要更换镜像源，还有其他乱七八糟的事情，所以把过程中的一些问题总结在这里。 apt 更换国内源 镜像源文件为：1&#x2F;etc&#x2F;apt&#x2F;sources.list 国内常用镜像源：12345678deb http:&#x2F;&#x2F;mirror">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Debian 安装后的一些问题">
-<meta property="og:url" content="http://example.com/2020/10/25/1.%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:url" content="http://example.com/2020/10/25/1.Debian%20%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Macchiato&#39;s Blog">
-<meta property="og:description" content="写在前面我个人最常用的 Linux 发行版是 debian，因为我觉得它比 Ubuntu 更轻量更稳定更高效。因为每次装完系统都需要更换镜像源，还有其他乱七八糟的事情，所以把过程中的一些问题总结在这里。 apt 更换国内源 镜像源文件为：  1&#x2F;etc&#x2F;apt&#x2F;sources.list 国内常用镜像源：  12345678deb http:&#x2F;&#x2F;mi">
+<meta property="og:description" content="写在前面我个人最常用的 Linux 发行版是 debian，因为我觉得它比 Ubuntu 更轻量更稳定更高效。因为每次装完系统都需要更换镜像源，还有其他乱七八糟的事情，所以把过程中的一些问题总结在这里。 apt 更换国内源 镜像源文件为：1&#x2F;etc&#x2F;apt&#x2F;sources.list 国内常用镜像源：12345678deb http:&#x2F;&#x2F;mirror">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/null">
 <meta property="article:published_time" content="2020-10-25T14:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-22T14:36:23.270Z">
+<meta property="article:modified_time" content="2021-02-27T13:31:14.430Z">
 <meta property="article:author" content="Timmy Sun">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/null">
-<meta name="twitter:site" content="@Candiinya">
+<meta name="twitter:site" content="@DrZomboss8">
   
   <!-- 站点验证相关 -->
   
@@ -81,29 +81,6 @@
                                         <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
                                     
                                 
-                                    
-                                        <li><a href="/friends/"><i class="fa fa-paw"></i>好伙伴</a></li>
-                                    
-                                
-                                    
-                                        <li>
-                                            <a><i class="fa fa-link"></i>链接</a>
-                                            <ul class="sub-menu">
-                                                
-                                                    
-                                                
-                                                    
-                                                        <li><a target="_blank" rel="noopener" href="https://candinya.com">作者博客</a></li>
-                                                    
-                                                
-                                                    
-                                                        <li><a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">项目链接</a></li>
-                                                    
-                                                
-                                            </ul>
-                                        </li>
-                                    
-                                
                             </ul>
                         </nav>
                     </div>
@@ -141,7 +118,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1138
+                            1128
                         
                         字
                         
@@ -150,18 +127,18 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1611326183270"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1614432674430"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
                 <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>我个人最常用的 Linux 发行版是 debian，因为我觉得它比 Ubuntu 更轻量更稳定更高效。因为每次装完系统都需要更换镜像源，还有其他乱七八糟的事情，所以把过程中的一些问题总结在这里。</p>
 <h2 id="apt-更换国内源"><a href="#apt-更换国内源" class="headerlink" title="apt 更换国内源"></a>apt 更换国内源</h2><ul>
-<li>镜像源文件为：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;etc&#x2F;apt&#x2F;sources.list</span><br></pre></td></tr></table></figure></li>
-<li>国内常用镜像源：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster main non-free contrib</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster-updates main non-free contrib</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster-backports main non-free contrib</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian-security&#x2F; buster&#x2F;updates main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster-updates main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster-backports main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian-security&#x2F; buster&#x2F;updates main non-free contrib</span><br></pre></td></tr></table></figure></li>
-<li>更新源：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># apt-get update</span><br></pre></td></tr></table></figure>
-<h2 id="public-GPG-key-error-“NO-PUBKEY"><a href="#public-GPG-key-error-“NO-PUBKEY" class="headerlink" title="public GPG key error (“NO_PUBKEY)"></a>public GPG key error (“NO_PUBKEY)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># sudo apt-key adv --keyserver hkp:&#x2F;&#x2F;pool.sks-keyservers.net:80 --recv-keys THE_MISSING_KEY_HERE    #THE_MISSING_KEY_HERE 用缺少的公钥替换</span><br></pre></td></tr></table></figure></li>
+<li>镜像源文件为：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;etc&#x2F;apt&#x2F;sources.list</span><br></pre></td></tr></table></figure></li>
+<li>国内常用镜像源：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster main non-free contrib</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster-updates main non-free contrib</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster-backports main non-free contrib</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian-security&#x2F; buster&#x2F;updates main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster-updates main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster-backports main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian-security&#x2F; buster&#x2F;updates main non-free contrib</span><br></pre></td></tr></table></figure></li>
+<li>更新源：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+<h2 id="public-GPG-key-error-“NO-PUBKEY"><a href="#public-GPG-key-error-“NO-PUBKEY" class="headerlink" title="public GPG key error (“NO_PUBKEY)"></a>public GPG key error (“NO_PUBKEY)</h2></li>
 </ul>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key adv --keyserver hkp:&#x2F;&#x2F;pool.sks-keyservers.net:80 --recv-keys THE_MISSING_KEY_HERE    #THE_MISSING_KEY_HERE 用缺少的公钥替换</span><br></pre></td></tr></table></figure>
             </div>
             
                 <div class="kratos-copyright text-center clearfix">
@@ -214,7 +191,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2020/10/25/1.%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/",
+                text: "http://example.com/2020/10/25/1.Debian%20%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -226,7 +203,7 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2020/10/25/1.%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/";
+            const hostUrl       = "http://example.com/2020/10/25/1.Debian%20%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/";
             const title         = "「Debian 安装后的一些问题」";
             const excerpt       = `写在前面我个人最常用的 Linux 发行版是 debian，因为我觉得它比 Ubuntu 更轻量更稳定更高效。因为每次装完系统都需要更换镜像源，还有其他乱七八糟的事情，所以把过程中的一些问题总结在这里。
 apt 更换国内源
@@ -252,7 +229,7 @@ apt 更换国内源
                         <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2021-01-22</span>
+                    <span>最后编辑：2021-02-27</span>
                     </div>
                 </div>
             </footer>
@@ -279,7 +256,7 @@ apt 更换国内源
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
         <div class="photo-wrapper-tip text-center">
-            <img class="about-photo" src="/images/avatar.webp" />
+            <img class="about-photo" src="/images/avatar.png" />
         </div>
     </div>
     <div class="textwidget">
@@ -393,13 +370,13 @@ apt 更换国内源
                 <div class="col-md-6 col-md-offset-3 footer-list text-center">
                     <ul class="kratos-social-icons">
                         
+                        <li><a href="mailto:zewei.dream@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/Zomboss"><i class="fa fa-telegram"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://twitter.com/DrZomboss8"><i class="fa fa-twitter"></i></a></li>
                         
-                        <li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="https://twitter.com/Candiinya"><i class="fa fa-twitter"></i></a></li>
                         
                         
-                        
-                        <li><a target="_blank" rel="nofollow" href="https://github.com/Candinya"><i class="fa fa-github"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/mocha-macchiato"><i class="fa fa-github"></i></a></li>
                         
                     </ul>
                     <ul class="kratos-copyright">

@@ -15,22 +15,22 @@
   
     <meta name="keywords" content="Linux, Network" />
   
-  <meta name="description" content="写在前面 最近开始学习写网页，但是在 Windows 上搭建环境过于麻烦，集成环境又有各种各样的问题，而且以后搭建服务器肯定都是在 Linux 上。所以这里总结一下搭建网络服务器时遇到的一些问题，方便以后参考。   Lnmp &#x3D; Linux + Nginx + MySQL + PHP  安装Nginx  1# apt install -y nginx MySQL 打开网站 MySQL APT Re">
+  <meta name="description" content="写在前面 最近开始学习写网页，但是在 Windows 上搭建环境过于麻烦，集成环境又有各种各样的问题，而且以后搭建服务器肯定都是在 Linux 上。所以这里总结一下搭建网络服务器时遇到的一些问题，方便以后参考。   Lnmp &#x3D; Linux + Nginx + MySQL + PHP  安装Nginx1apt install -y nginx MySQL 打开网站 MySQL APT Respos">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建Lnmp环境">
 <meta property="og:url" content="http://example.com/2020/11/01/2.%E6%90%AD%E5%BB%BALnmp%E7%8E%AF%E5%A2%83/index.html">
 <meta property="og:site_name" content="Macchiato&#39;s Blog">
-<meta property="og:description" content="写在前面 最近开始学习写网页，但是在 Windows 上搭建环境过于麻烦，集成环境又有各种各样的问题，而且以后搭建服务器肯定都是在 Linux 上。所以这里总结一下搭建网络服务器时遇到的一些问题，方便以后参考。   Lnmp &#x3D; Linux + Nginx + MySQL + PHP  安装Nginx  1# apt install -y nginx MySQL 打开网站 MySQL APT Re">
+<meta property="og:description" content="写在前面 最近开始学习写网页，但是在 Windows 上搭建环境过于麻烦，集成环境又有各种各样的问题，而且以后搭建服务器肯定都是在 Linux 上。所以这里总结一下搭建网络服务器时遇到的一些问题，方便以后参考。   Lnmp &#x3D; Linux + Nginx + MySQL + PHP  安装Nginx1apt install -y nginx MySQL 打开网站 MySQL APT Respos">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/null">
 <meta property="article:published_time" content="2020-11-01T14:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-22T14:35:23.144Z">
+<meta property="article:modified_time" content="2021-02-27T13:33:14.810Z">
 <meta property="article:author" content="Timmy Sun">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Network">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/null">
-<meta name="twitter:site" content="@Candiinya">
+<meta name="twitter:site" content="@DrZomboss8">
   
   <!-- 站点验证相关 -->
   
@@ -82,29 +82,6 @@
                                         <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
                                     
                                 
-                                    
-                                        <li><a href="/friends/"><i class="fa fa-paw"></i>好伙伴</a></li>
-                                    
-                                
-                                    
-                                        <li>
-                                            <a><i class="fa fa-link"></i>链接</a>
-                                            <ul class="sub-menu">
-                                                
-                                                    
-                                                
-                                                    
-                                                        <li><a target="_blank" rel="noopener" href="https://candinya.com">作者博客</a></li>
-                                                    
-                                                
-                                                    
-                                                        <li><a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">项目链接</a></li>
-                                                    
-                                                
-                                            </ul>
-                                        </li>
-                                    
-                                
                             </ul>
                         </nav>
                     </div>
@@ -142,7 +119,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~2.39K
+                            ~2.36K
                         
                         字
                         
@@ -151,7 +128,7 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1611326123144"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1614432794810"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
@@ -161,46 +138,57 @@
 <ul>
 <li>Lnmp = Linux + Nginx + MySQL + PHP</li>
 </ul>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># apt install -y nginx</span><br></pre></td></tr></table></figure>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install -y nginx</span><br></pre></td></tr></table></figure>
 <h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><ol>
 <li><p>打开网站 <a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/repo/apt/">MySQL APT Respository</a> -&gt; <code>Download</code> -&gt; 右键点击 <code>No thanks, just start my download.</code>复制链接。</p>
 </li>
-<li><p>打开 XShell 并新建目录存放 MySQL，使用wget指令下载deb文件：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># wget https:&#x2F;&#x2F;dev.mysql.com&#x2F;get&#x2F;mysql-apt-config_0.8.15-1_all.deb</span><br></pre></td></tr></table></figure></li>
-<li><p>使用dpkg指令添加该文件进apt-get的源（以自己下载的文件为准）：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># dpkg -i .&#x2F;mysql-apt-config_0.8.15-1_all.deb</span><br></pre></td></tr></table></figure>
-<p> 弹窗之后选”OK”。</p>
+<li><p>打开 XShell 并新建目录存放 MySQL，使用 wget 指令下载 deb 文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;dev.mysql.com&#x2F;get&#x2F;mysql-apt-config_0.8.15-1_all.deb</span><br></pre></td></tr></table></figure></li>
+<li><p>使用 dpkg 指令添加该文件进 apt-get 的源（以自己下载的文件为准）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg -i .&#x2F;mysql-apt-config_0.8.15-1_all.deb</span><br></pre></td></tr></table></figure>
+<p>弹窗之后选”OK”。</p>
 </li>
 <li><p>更新源：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># apt-get update</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure></li>
 <li><p>安装 MySQL：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># apt-get install mysql-server</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install mysql-server</span><br></pre></td></tr></table></figure></li>
 <li><p>中途需要输入 root 密码。</p>
 </li>
 </ol>
 <h3 id="PHP-7-2"><a href="#PHP-7-2" class="headerlink" title="PHP 7.2"></a>PHP 7.2</h3><ol>
-<li>更新源并安装必要的依赖： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># apt update</span><br><span class="line"># apt install apt-transport-https ca-certificates curl software-properties-common</span><br></pre></td></tr></table></figure></li>
-<li>使用curl命令导入存储库的GPG密钥： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -fsSL https:&#x2F;&#x2F;packages.sury.org&#x2F;php&#x2F;apt.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure></li>
-<li>将ondrej的存储库添加到系统的软件存储库列表中： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># add-apt-repository &quot;deb https:&#x2F;&#x2F;packages.sury.org&#x2F;php&#x2F; $(lsb_release -cs) main&quot;</span><br></pre></td></tr></table></figure></li>
-<li>安装 PHP： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># apt update</span><br><span class="line"># apt install php7.2-common php7.2-cli</span><br></pre></td></tr></table></figure>
+<li><p>更新源并安装必要的依赖：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install apt-transport-https ca-certificates curl software-properties-common</span><br></pre></td></tr></table></figure></li>
+<li><p>使用 curl 命令导入存储库的 GPG 密钥：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https:&#x2F;&#x2F;packages.sury.org&#x2F;php&#x2F;apt.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure></li>
+<li><p>将 ondrej 的存储库添加到系统的软件存储库列表中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add-apt-repository &quot;deb https:&#x2F;&#x2F;packages.sury.org&#x2F;php&#x2F; $(lsb_release -cs) main&quot;</span><br></pre></td></tr></table></figure></li>
+<li><p>安装 PHP：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install php7.2-common php7.2-cli</span><br></pre></td></tr></table></figure>
 <h1 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h1></li>
 </ol>
 <h3 id="配置-Nginx-运行-PHP"><a href="#配置-Nginx-运行-PHP" class="headerlink" title="配置 Nginx 运行 PHP"></a>配置 Nginx 运行 PHP</h3><ol>
-<li>安装 php7.2-fpm： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># apt install php7.2-fpm</span><br></pre></td></tr></table></figure></li>
-<li>查看 php7.2-fpm 服务状态： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># systemctl status php7.2-fpm</span><br></pre></td></tr></table></figure></li>
-<li>编辑 Nginx 配置文件： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
- 在服务器块最下方添加以下行： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location ~ \.php$ &#123;</span><br><span class="line">      include snippets&#x2F;fastcgi-php.conf;</span><br><span class="line">      fastcgi_pass unix:&#x2F;run&#x2F;php&#x2F;php7.2-fpm.sock;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="安装-PHP-MySQL拓展"><a href="#安装-PHP-MySQL拓展" class="headerlink" title="安装 PHP MySQL拓展"></a>安装 PHP MySQL拓展</h3></li>
+<li><p>安装 php7.2-fpm：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install php7.2-fpm</span><br></pre></td></tr></table></figure></li>
+<li><p>查看 php7.2-fpm 服务状态：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status php7.2-fpm</span><br></pre></td></tr></table></figure></li>
+<li><p>编辑 Nginx 配置文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
+<p>在服务器块最下方添加以下行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location ~ \.php$ &#123;</span><br><span class="line">      include snippets&#x2F;fastcgi-php.conf;</span><br><span class="line">      fastcgi_pass unix:&#x2F;run&#x2F;php&#x2F;php7.2-fpm.sock;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="安装-PHP-MySQL-拓展"><a href="#安装-PHP-MySQL-拓展" class="headerlink" title="安装 PHP MySQL 拓展"></a>安装 PHP MySQL 拓展</h3></li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># apt install php7.2-mysql php7.2-gd</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install php7.2-mysql php7.2-gd</span><br></pre></td></tr></table></figure>
 <h1 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h1><h3 id="Nginx-1"><a href="#Nginx-1" class="headerlink" title="Nginx"></a>Nginx</h3><ul>
-<li>重启：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># systemctl restart nginx</span><br></pre></td></tr></table></figure></li>
-<li>服务器块模板：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">server</span> &#123;</span><br><span class="line">      <span class="string">listen</span>       <span class="number">80</span><span class="string">;</span>                   <span class="comment">#监听端口</span></span><br><span class="line">      <span class="string">server_name</span>  <span class="number">192.168</span><span class="number">.1</span><span class="number">.1</span><span class="string">;</span>          <span class="comment">#域名或IP</span></span><br><span class="line">      <span class="string">location</span> <span class="string">/</span> &#123;</span><br><span class="line">          <span class="string">root</span>   <span class="string">path;</span>                   <span class="comment">#路径</span></span><br><span class="line">          <span class="string">index</span>  <span class="string">index.html;</span>             <span class="comment">#搜索文件</span></span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>配置文件目录：<code>/etc/.config/nginx.conf</code></li>
+<li><p>重启：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart nginx</span><br></pre></td></tr></table></figure></li>
+<li><p>服务器块模板：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">server</span> &#123;</span><br><span class="line">      <span class="string">listen</span>       <span class="number">80</span><span class="string">;</span>                   <span class="comment">#监听端口</span></span><br><span class="line">      <span class="string">server_name</span>  <span class="number">192.168</span><span class="number">.1</span><span class="number">.1</span><span class="string">;</span>          <span class="comment">#域名或IP</span></span><br><span class="line">      <span class="string">location</span> <span class="string">/</span> &#123;</span><br><span class="line">          <span class="string">root</span>   <span class="string">path;</span>                   <span class="comment">#路径</span></span><br><span class="line">          <span class="string">index</span>  <span class="string">index.html;</span>             <span class="comment">#搜索文件</span></span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>配置文件目录：<code>/etc/.config/nginx.conf</code></p>
+</li>
 </ul>
 <h3 id="MySQL-1"><a href="#MySQL-1" class="headerlink" title="MySQL"></a>MySQL</h3><ul>
 <li><p>连接：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -uroot -p123456                    #u+用户名，p+密码</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p123456                    #u+用户名，p+密码</span><br></pre></td></tr></table></figure></li>
 <li><p>查看所有数据库：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure></li>
 <li><p>选中数据库：</p>
@@ -220,8 +208,7 @@
 <li><p>插入列：</p>
 <ul>
 <li><p>到最后一列：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table table_name add column column_name varchar(255);</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table table_name add column column_name varchar(255);</span><br></pre></td></tr></table></figure></li>
 <li><p>到指定列：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table table_name add column column_name varchar(255) after column_name;</span><br></pre></td></tr></table></figure></li>
 <li><p>到第一列：</p>
@@ -322,7 +309,7 @@ Lnmp = Li...`;
                         <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Network/" rel="tag">Network</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2021-01-22</span>
+                    <span>最后编辑：2021-02-27</span>
                     </div>
                 </div>
             </footer>
@@ -331,7 +318,7 @@ Lnmp = Li...`;
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
                 <div class="nav-previous clearfix">
-                    <a title=" Debian 安装后的一些问题" href="/2020/10/25/1.安装后的一些问题/">&lt; 上一篇</a>
+                    <a title=" Debian 安装后的一些问题" href="/2020/10/25/1.Debian 安装后的一些问题/">&lt; 上一篇</a>
                 </div>
                 
                 
@@ -353,7 +340,7 @@ Lnmp = Li...`;
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
         <div class="photo-wrapper-tip text-center">
-            <img class="about-photo" src="/images/avatar.webp" />
+            <img class="about-photo" src="/images/avatar.png" />
         </div>
     </div>
     <div class="textwidget">
@@ -467,13 +454,13 @@ Lnmp = Li...`;
                 <div class="col-md-6 col-md-offset-3 footer-list text-center">
                     <ul class="kratos-social-icons">
                         
+                        <li><a href="mailto:zewei.dream@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/Zomboss"><i class="fa fa-telegram"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://twitter.com/DrZomboss8"><i class="fa fa-twitter"></i></a></li>
                         
-                        <li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="https://twitter.com/Candiinya"><i class="fa fa-twitter"></i></a></li>
                         
                         
-                        
-                        <li><a target="_blank" rel="nofollow" href="https://github.com/Candinya"><i class="fa fa-github"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/mocha-macchiato"><i class="fa fa-github"></i></a></li>
                         
                     </ul>
                     <ul class="kratos-copyright">
