@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>GRUB简介以及引导失败的解决方法 | Macchiato's Blog</title>
+  <title>Linux命令查询 | Macchiato's Blog</title>
   <meta name="author" content="Timmy Sun" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,21 +13,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="Linux, 引导" />
+    <meta name="keywords" content="Linux" />
   
-  <meta name="description" content="GRUB 的配置 grub 的配置文件为 &#x2F;boot&#x2F;grub&#x2F;grub.cfg。 grub.cfg 文件可以手动创建，但是一般都是通过 grub-mkconfig 实用工具（Debian 中被包装为 update-grub ）来完成的。grub-mkconfig&#x2F;update-grub 的配置文件为 &#x2F;etc&#x2F;default&#x2F;grub。其中的一些常用选项如下： GRUB_BACKGROUND：背">
+  <meta name="description" content="写在前面命令行是 Linux 的强大工具，但是将所有的命令和使用方法记住是不可能的，学会使用查询会使你的 Linux 使用事半功倍。 查询命令 helphelp 命令可以列出所有的内部指令。使用 help name 还可以查询命令的具体使用方法。  whichwhich name 命令可以查询二进制程序并搜索其路径。  whereiswhereis name 该命令和 which 一样，但是这个命">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GRUB简介以及引导失败的解决方法">
-<meta property="og:url" content="http://example.com/2021/01/03/11.GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:title" content="Linux命令查询">
+<meta property="og:url" content="http://example.com/2020/12/20/Linux%E5%91%BD%E4%BB%A4%E6%9F%A5%E8%AF%A2/index.html">
 <meta property="og:site_name" content="Macchiato&#39;s Blog">
-<meta property="og:description" content="GRUB 的配置 grub 的配置文件为 &#x2F;boot&#x2F;grub&#x2F;grub.cfg。 grub.cfg 文件可以手动创建，但是一般都是通过 grub-mkconfig 实用工具（Debian 中被包装为 update-grub ）来完成的。grub-mkconfig&#x2F;update-grub 的配置文件为 &#x2F;etc&#x2F;default&#x2F;grub。其中的一些常用选项如下： GRUB_BACKGROUND：背">
+<meta property="og:description" content="写在前面命令行是 Linux 的强大工具，但是将所有的命令和使用方法记住是不可能的，学会使用查询会使你的 Linux 使用事半功倍。 查询命令 helphelp 命令可以列出所有的内部指令。使用 help name 还可以查询命令的具体使用方法。  whichwhich name 命令可以查询二进制程序并搜索其路径。  whereiswhereis name 该命令和 which 一样，但是这个命">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/null">
-<meta property="article:published_time" content="2021-01-03T14:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-22T14:24:51.917Z">
+<meta property="article:published_time" content="2020-12-20T14:00:00.000Z">
+<meta property="article:modified_time" content="2021-01-22T14:25:52.391Z">
 <meta property="article:author" content="Timmy Sun">
 <meta property="article:tag" content="Linux">
-<meta property="article:tag" content="引导">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/null">
 <meta name="twitter:site" content="@DrZomboss8">
@@ -109,17 +108,17 @@
     <article>
         <div class="kratos-hentry kratos-post-inner clearfix">
             <header class="kratos-entry-header">
-                <h1 class="kratos-entry-title text-center">GRUB简介以及引导失败的解决方法</h1>
+                <h1 class="kratos-entry-title text-center">Linux命令查询</h1>
                 
                 <div class="kratos-post-meta text-center">
                     <span>
-                        <i class="fa fa-calendar"></i> 2021-01-03
+                        <i class="fa fa-calendar"></i> 2020-12-20
                         <i class="fa fa-folder"></i> 分类 
                         <i class="fa fa-user"></i> 作者 Timmy Sun
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1004
+                            451
                         
                         字
                         
@@ -128,32 +127,21 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1611325491917"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1611325552391"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
-                <h2 id="GRUB-的配置"><a href="#GRUB-的配置" class="headerlink" title="GRUB 的配置"></a>GRUB 的配置</h2><ul>
-<li>grub 的配置文件为 /boot/grub/grub.cfg。</li>
-<li>grub.cfg 文件可以手动创建，但是一般都是通过 <code>grub-mkconfig</code> 实用工具（Debian 中被包装为 <code>update-grub</code> ）来完成的。grub-mkconfig/update-grub 的配置文件为 /etc/default/grub。其中的一些常用选项如下：<blockquote>
-<p><code>GRUB_BACKGROUND</code>：背景图片（必须是.png、.tga、.jpg、.jpge）格式；<br><code>GRUB_CMDLINE_LINUX</code>：添加到菜单表项中的 Linux 内核参数；<br><code>GRUB_DEFAULT</code>：默认菜单项的编号或标题；<br><code>GRUB_DISABLE_RECOVERY</code>：不生成恢复模式菜单项；<br><code>GRUB_PRELOAD_MODULES</code>：需要尽早装载的 GRUB 模块列表；<br><code>GRUB_TIMEOUT</code>：引导菜单在自动引导前显示的时长（秒）。</p>
-</blockquote>
+                <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>命令行是 Linux 的强大工具，但是将所有的命令和使用方法记住是不可能的，学会使用查询会使你的 Linux 使用事半功倍。</p>
+<h2 id="查询命令"><a href="#查询命令" class="headerlink" title="查询命令"></a>查询命令</h2><ul>
+<li><p><strong>help</strong><br><code>help</code> 命令可以列出所有的内部指令。使用 <code>help name</code> 还可以查询命令的具体使用方法。</p>
 </li>
-<li>如果想改变引导菜单中所列出的内核顺序、设置密码或修改引导菜单的名称，需要编辑 /etc/grub.d/40_custom 文件。</li>
-<li>内核升级之后会自动重新生成 grub.cfg。</li>
-</ul>
-<h2 id="GRUB-命令行"><a href="#GRUB-命令行" class="headerlink" title="GRUB 命令行"></a>GRUB 命令行</h2><ul>
-<li>GRUB 支持使用命令行在引导期间动态编辑配置文件。在出现 GRUB 引导画面时，按下 c 键进入命令行模式。</li>
-<li>可以在命令行中引导没有出现在 grub.cfg 中的操作系统，显示系统信息，执行基本系统检测。</li>
-<li>按下 Tab 键可以输出可用的命令列表。<br>  这里列出一些常用的命令：<blockquote>
-<p><code>Boot</code>：用指定的内核镜像引导系统；<br><code>Help</code>：获取命令的交互式帮助；<br><code>Linux</code>：加载 Linux 内核；<br><code>reboot</code>：重新引导系统；<br><code>search</code>：通过文件、文件系统卷标或 UUID 搜索设备；<br><code>usb</code>：测试是否支持 USB。</p>
-</blockquote>
+<li><p><strong>which</strong><br><code>which name</code> 命令可以查询二进制程序并搜索其路径。</p>
+</li>
+<li><p><strong>whereis</strong><br><code>whereis name</code> 该命令和 <code>which</code> 一样，但是这个命令可以搜索除 shell 的搜索路径以外的更大范围的系统目录。</p>
+</li>
+<li><p><strong>locate</strong><br><code>locate</code> 命令包含在 <code>mlocate</code> 软件包中，需要安装后才能使用。<code>locate</code> 就像 Windows 中的 everything 一样，非常好用，可以查找任何类型的文件，并不仅限于命令或者软件包。<br>locate 的数据库由 cron 定期执行 updatedb 命令来更新，因此如果需要 locate 的执行结果反映出文件系统新近的变化或是第一次安装软件包后立即需要执行此命令，请手动执行 updatedb 命令。</p>
 </li>
 </ul>
-<h2 id="Linux-内核选项"><a href="#Linux-内核选项" class="headerlink" title="Linux 内核选项"></a>Linux 内核选项</h2><p>可以利用内核启动选项修改内核参数、要求内核探测特定设备、指定 init 或 systemd 进程的路径、选择特定的跟设备：</p>
-<blockquote>
-<p><code>debug</code>：开启内核调试；<br><code>init=/bin/bash</code>：只启动 bash shell，可用于紧急恢复；<br><code>root=/dev/foo</code>：告诉内核将 /dev/foo 作为根目录；<br><code>single</code>：引导进入单用户模式。</p>
-</blockquote>
-<h2 id="单用户模式"><a href="#单用户模式" class="headerlink" title="单用户模式"></a>单用户模式</h2><p>单用户模式只启动了最小数量的进程、守护进程和服务。根文件系统会被挂载，但并不初始化网络。类似于 Windows 的安全启动模式。</p>
 
             </div>
             
@@ -207,7 +195,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2021/01/03/11.GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/",
+                text: "http://example.com/2020/12/20/Linux%E5%91%BD%E4%BB%A4%E6%9F%A5%E8%AF%A2/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -219,11 +207,11 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2021/01/03/11.GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/";
-            const title         = "「GRUB简介以及引导失败的解决方法」";
-            const excerpt       = `GRUB 的配置
-grub 的配置文件为 /boot/grub/grub.cfg。
-grub.cfg 文件可以手动创建，但是一般都是通过 grub-mkconfig 实用工具（Debian 中被包装为 update-grub ）来完成...`;
+            const hostUrl       = "http://example.com/2020/12/20/Linux%E5%91%BD%E4%BB%A4%E6%9F%A5%E8%AF%A2/";
+            const title         = "「Linux命令查询」";
+            const excerpt       = `写在前面命令行是 Linux 的强大工具，但是将所有的命令和使用方法记住是不可能的，学会使用查询会使你的 Linux 使用事半功倍。
+查询命令
+helphelp 命令可以列出所有的内部指令。使用 help name 还可以查询命令的具...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -242,7 +230,7 @@ grub.cfg 文件可以手动创建，但是一般都是通过 grub-mkconfig 实�
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/%E5%BC%95%E5%AF%BC/" rel="tag">引导</a>
+                        <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>
                     </div>
                     <div class="pull-date">
                     <span>最后编辑：2021-01-22</span>
@@ -254,12 +242,12 @@ grub.cfg 文件可以手动创建，但是一般都是通过 grub-mkconfig 实�
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
                 <div class="nav-previous clearfix">
-                    <a title=" Arch安装" href="/2020/12/27/10.Arch安装/">&lt; 上一篇</a>
+                    <a title=" Clash实现局域网透明代理" href="/2020/12/13/Clash实现局域网透明代理/">&lt; 上一篇</a>
                 </div>
                 
                 
                 <div class="nav-next clearfix">
-                    <a title=" BIOS与引导" href="/2021/01/10/12BIOS与引导/">下一篇 &gt;</a>
+                    <a title=" Arch安装" href="/2020/12/27/Arch安装/">下一篇 &gt;</a>
                 </div>
                 
             </nav>
@@ -309,31 +297,31 @@ grub.cfg 文件可以手动创建，但是一般都是通过 grub-mkconfig 实�
         
           
           
-            <a class="list-group-item" href="/2021/01/17/13.WSL+HEXO+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i class="fa  fa-book"></i> WSL+HEXO+Github 搭建个人博客</a>
+            <a class="list-group-item" href="/2021/01/24/Debian%20%E8%BF%9E%E6%8E%A5%E6%83%A0%E6%99%AE%E6%89%93%E5%8D%B0%E6%9C%BA%E5%B9%B6%E5%85%B1%E4%BA%AB/"><i class="fa  fa-book"></i> Debian 连接惠普打印机并共享</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/01/10/12BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/"><i class="fa  fa-book"></i> BIOS与引导</a>
+            <a class="list-group-item" href="/2021/01/17/WSL+HEXO+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i class="fa  fa-book"></i> WSL+HEXO+Github 搭建个人博客</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/01/03/11.GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><i class="fa  fa-book"></i> GRUB简介以及引导失败的解决方法</a>
+            <a class="list-group-item" href="/2021/01/10/BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/"><i class="fa  fa-book"></i> BIOS与引导</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2020/12/27/10.Arch%E5%AE%89%E8%A3%85/"><i class="fa  fa-book"></i> Arch安装</a>
+            <a class="list-group-item" href="/2021/01/03/GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><i class="fa  fa-book"></i> GRUB简介以及引导失败的解决方法</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2020/12/20/9.Linux%E5%91%BD%E4%BB%A4%E6%9F%A5%E8%AF%A2/"><i class="fa  fa-book"></i> Linux命令查询</a>
+            <a class="list-group-item" href="/2020/12/27/Arch%E5%AE%89%E8%A3%85/"><i class="fa  fa-book"></i> Arch安装</a>
             
           
         

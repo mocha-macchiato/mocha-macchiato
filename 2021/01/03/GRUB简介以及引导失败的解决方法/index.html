@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>免费无版权插画网站 | Macchiato's Blog</title>
+  <title>GRUB简介以及引导失败的解决方法 | Macchiato's Blog</title>
   <meta name="author" content="Timmy Sun" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,20 +13,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="资源" />
+    <meta name="keywords" content="Linux, 引导" />
   
-  <meta name="description" content="写在前面开始学习做网页后，为了页面美观，经常需要插入一些插画。这里找到一些无版权可商用的高质量插画网站以便以后查找使用。  https:&#x2F;&#x2F;lukaszadam.com&#x2F;illustrations https:&#x2F;&#x2F;isometric.online&#x2F; https:&#x2F;&#x2F;www.freepik.com&#x2F; https:&#x2F;&#x2F;www.manypixels.co&#x2F;gallery&#x2F;?color&#x3D;6d48d7%E5">
+  <meta name="description" content="GRUB 的配置 grub 的配置文件为 &#x2F;boot&#x2F;grub&#x2F;grub.cfg。 grub.cfg 文件可以手动创建，但是一般都是通过 grub-mkconfig 实用工具（Debian 中被包装为 update-grub ）来完成的。grub-mkconfig&#x2F;update-grub 的配置文件为 &#x2F;etc&#x2F;default&#x2F;grub。其中的一些常用选项如下： GRUB_BACKGROUND：背">
 <meta property="og:type" content="article">
-<meta property="og:title" content="免费无版权插画网站">
-<meta property="og:url" content="http://example.com/2020/11/29/6.%E5%85%8D%E8%B4%B9%E6%97%A0%E7%89%88%E6%9D%83%E6%8F%92%E7%94%BB%E7%BD%91%E7%AB%99/index.html">
+<meta property="og:title" content="GRUB简介以及引导失败的解决方法">
+<meta property="og:url" content="http://example.com/2021/01/03/GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Macchiato&#39;s Blog">
-<meta property="og:description" content="写在前面开始学习做网页后，为了页面美观，经常需要插入一些插画。这里找到一些无版权可商用的高质量插画网站以便以后查找使用。  https:&#x2F;&#x2F;lukaszadam.com&#x2F;illustrations https:&#x2F;&#x2F;isometric.online&#x2F; https:&#x2F;&#x2F;www.freepik.com&#x2F; https:&#x2F;&#x2F;www.manypixels.co&#x2F;gallery&#x2F;?color&#x3D;6d48d7%E5">
+<meta property="og:description" content="GRUB 的配置 grub 的配置文件为 &#x2F;boot&#x2F;grub&#x2F;grub.cfg。 grub.cfg 文件可以手动创建，但是一般都是通过 grub-mkconfig 实用工具（Debian 中被包装为 update-grub ）来完成的。grub-mkconfig&#x2F;update-grub 的配置文件为 &#x2F;etc&#x2F;default&#x2F;grub。其中的一些常用选项如下： GRUB_BACKGROUND：背">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/null">
-<meta property="article:published_time" content="2020-11-29T14:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-22T14:31:32.284Z">
+<meta property="article:published_time" content="2021-01-03T14:00:00.000Z">
+<meta property="article:modified_time" content="2021-01-22T14:24:51.917Z">
 <meta property="article:author" content="Timmy Sun">
-<meta property="article:tag" content="资源">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="引导">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/null">
 <meta name="twitter:site" content="@DrZomboss8">
@@ -108,17 +109,17 @@
     <article>
         <div class="kratos-hentry kratos-post-inner clearfix">
             <header class="kratos-entry-header">
-                <h1 class="kratos-entry-title text-center">免费无版权插画网站</h1>
+                <h1 class="kratos-entry-title text-center">GRUB简介以及引导失败的解决方法</h1>
                 
                 <div class="kratos-post-meta text-center">
                     <span>
-                        <i class="fa fa-calendar"></i> 2020-11-29
+                        <i class="fa fa-calendar"></i> 2021-01-03
                         <i class="fa fa-folder"></i> 分类 
                         <i class="fa fa-user"></i> 作者 Timmy Sun
                         <i class="fa fa-edit"></i> 
                         
                         
-                            249
+                            1004
                         
                         字
                         
@@ -127,20 +128,32 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1611325892284"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1611325491917"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
-                <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>开始学习做网页后，为了页面美观，经常需要插入一些插画。这里找到一些无版权可商用的高质量插画网站以便以后查找使用。</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://lukaszadam.com/illustrations">https://lukaszadam.com/illustrations</a></li>
-<li><a target="_blank" rel="noopener" href="https://isometric.online/">https://isometric.online/</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.freepik.com/">https://www.freepik.com/</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.manypixels.co/gallery/?color=6d48d7%E5%92%8CunDraw">https://www.manypixels.co/gallery/?color=6d48d7%E5%92%8CunDraw</a></li>
-<li><a target="_blank" rel="noopener" href="https://storyset.com/">https://storyset.com/</a></li>
-<li></li>
-</ol>
-<p>这篇博客将会持续更新。</p>
+                <h2 id="GRUB-的配置"><a href="#GRUB-的配置" class="headerlink" title="GRUB 的配置"></a>GRUB 的配置</h2><ul>
+<li>grub 的配置文件为 /boot/grub/grub.cfg。</li>
+<li>grub.cfg 文件可以手动创建，但是一般都是通过 <code>grub-mkconfig</code> 实用工具（Debian 中被包装为 <code>update-grub</code> ）来完成的。grub-mkconfig/update-grub 的配置文件为 /etc/default/grub。其中的一些常用选项如下：<blockquote>
+<p><code>GRUB_BACKGROUND</code>：背景图片（必须是.png、.tga、.jpg、.jpge）格式；<br><code>GRUB_CMDLINE_LINUX</code>：添加到菜单表项中的 Linux 内核参数；<br><code>GRUB_DEFAULT</code>：默认菜单项的编号或标题；<br><code>GRUB_DISABLE_RECOVERY</code>：不生成恢复模式菜单项；<br><code>GRUB_PRELOAD_MODULES</code>：需要尽早装载的 GRUB 模块列表；<br><code>GRUB_TIMEOUT</code>：引导菜单在自动引导前显示的时长（秒）。</p>
+</blockquote>
+</li>
+<li>如果想改变引导菜单中所列出的内核顺序、设置密码或修改引导菜单的名称，需要编辑 /etc/grub.d/40_custom 文件。</li>
+<li>内核升级之后会自动重新生成 grub.cfg。</li>
+</ul>
+<h2 id="GRUB-命令行"><a href="#GRUB-命令行" class="headerlink" title="GRUB 命令行"></a>GRUB 命令行</h2><ul>
+<li>GRUB 支持使用命令行在引导期间动态编辑配置文件。在出现 GRUB 引导画面时，按下 c 键进入命令行模式。</li>
+<li>可以在命令行中引导没有出现在 grub.cfg 中的操作系统，显示系统信息，执行基本系统检测。</li>
+<li>按下 Tab 键可以输出可用的命令列表。<br>  这里列出一些常用的命令：<blockquote>
+<p><code>Boot</code>：用指定的内核镜像引导系统；<br><code>Help</code>：获取命令的交互式帮助；<br><code>Linux</code>：加载 Linux 内核；<br><code>reboot</code>：重新引导系统；<br><code>search</code>：通过文件、文件系统卷标或 UUID 搜索设备；<br><code>usb</code>：测试是否支持 USB。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Linux-内核选项"><a href="#Linux-内核选项" class="headerlink" title="Linux 内核选项"></a>Linux 内核选项</h2><p>可以利用内核启动选项修改内核参数、要求内核探测特定设备、指定 init 或 systemd 进程的路径、选择特定的跟设备：</p>
+<blockquote>
+<p><code>debug</code>：开启内核调试；<br><code>init=/bin/bash</code>：只启动 bash shell，可用于紧急恢复；<br><code>root=/dev/foo</code>：告诉内核将 /dev/foo 作为根目录；<br><code>single</code>：引导进入单用户模式。</p>
+</blockquote>
+<h2 id="单用户模式"><a href="#单用户模式" class="headerlink" title="单用户模式"></a>单用户模式</h2><p>单用户模式只启动了最小数量的进程、守护进程和服务。根文件系统会被挂载，但并不初始化网络。类似于 Windows 的安全启动模式。</p>
 
             </div>
             
@@ -194,7 +207,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2020/11/29/6.%E5%85%8D%E8%B4%B9%E6%97%A0%E7%89%88%E6%9D%83%E6%8F%92%E7%94%BB%E7%BD%91%E7%AB%99/",
+                text: "http://example.com/2021/01/03/GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -206,12 +219,11 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2020/11/29/6.%E5%85%8D%E8%B4%B9%E6%97%A0%E7%89%88%E6%9D%83%E6%8F%92%E7%94%BB%E7%BD%91%E7%AB%99/";
-            const title         = "「免费无版权插画网站」";
-            const excerpt       = `写在前面开始学习做网页后，为了页面美观，经常需要插入一些插画。这里找到一些无版权可商用的高质量插画网站以便以后查找使用。
-
-https://lukaszadam.com/illustrations
-https://isometric....`;
+            const hostUrl       = "http://example.com/2021/01/03/GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/";
+            const title         = "「GRUB简介以及引导失败的解决方法」";
+            const excerpt       = `GRUB 的配置
+grub 的配置文件为 /boot/grub/grub.cfg。
+grub.cfg 文件可以手动创建，但是一般都是通过 grub-mkconfig 实用工具（Debian 中被包装为 update-grub ）来完成...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -230,7 +242,7 @@ https://isometric....`;
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/%E8%B5%84%E6%BA%90/" rel="tag">资源</a>
+                        <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/%E5%BC%95%E5%AF%BC/" rel="tag">引导</a>
                     </div>
                     <div class="pull-date">
                     <span>最后编辑：2021-01-22</span>
@@ -242,12 +254,12 @@ https://isometric....`;
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
                 <div class="nav-previous clearfix">
-                    <a title=" 搭建 Trojan" href="/2020/11/22/5.Trojan/">&lt; 上一篇</a>
+                    <a title=" Arch安装" href="/2020/12/27/Arch安装/">&lt; 上一篇</a>
                 </div>
                 
                 
                 <div class="nav-next clearfix">
-                    <a title=" Markdown的简单使用" href="/2020/12/06/7.Markdown的简单使用/">下一篇 &gt;</a>
+                    <a title=" BIOS与引导" href="/2021/01/10/BIOS与引导/">下一篇 &gt;</a>
                 </div>
                 
             </nav>
@@ -297,31 +309,31 @@ https://isometric....`;
         
           
           
-            <a class="list-group-item" href="/2021/01/17/13.WSL+HEXO+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i class="fa  fa-book"></i> WSL+HEXO+Github 搭建个人博客</a>
+            <a class="list-group-item" href="/2021/01/24/Debian%20%E8%BF%9E%E6%8E%A5%E6%83%A0%E6%99%AE%E6%89%93%E5%8D%B0%E6%9C%BA%E5%B9%B6%E5%85%B1%E4%BA%AB/"><i class="fa  fa-book"></i> Debian 连接惠普打印机并共享</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/01/10/12BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/"><i class="fa  fa-book"></i> BIOS与引导</a>
+            <a class="list-group-item" href="/2021/01/17/WSL+HEXO+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i class="fa  fa-book"></i> WSL+HEXO+Github 搭建个人博客</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/01/03/11.GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><i class="fa  fa-book"></i> GRUB简介以及引导失败的解决方法</a>
+            <a class="list-group-item" href="/2021/01/10/BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/"><i class="fa  fa-book"></i> BIOS与引导</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2020/12/27/10.Arch%E5%AE%89%E8%A3%85/"><i class="fa  fa-book"></i> Arch安装</a>
+            <a class="list-group-item" href="/2021/01/03/GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><i class="fa  fa-book"></i> GRUB简介以及引导失败的解决方法</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2020/12/20/9.Linux%E5%91%BD%E4%BB%A4%E6%9F%A5%E8%AF%A2/"><i class="fa  fa-book"></i> Linux命令查询</a>
+            <a class="list-group-item" href="/2020/12/27/Arch%E5%AE%89%E8%A3%85/"><i class="fa  fa-book"></i> Arch安装</a>
             
           
         

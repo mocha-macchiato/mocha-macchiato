@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>WSL+HEXO+Github 搭建个人博客 | Macchiato's Blog</title>
+  <title>BIOS与引导 | Macchiato's Blog</title>
   <meta name="author" content="Timmy Sun" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,21 +13,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="Linux, WSL" />
+    <meta name="keywords" content="引导" />
   
-  <meta name="description" content="安装依赖 安装 git：  1# apt install git 安装 Node.js：  12$ curl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_15.x | sudo -E bash -$ sudo apt-get install -y nodejs  为 npm 更换国内源：  1# npm config set regist">
+  <meta name="description" content="BIOS BIOS（英文：Basic Input&#x2F;Output System），即基本输入输出系统。BIOS预安装在个人电脑的主板上，是个人电脑启动时加载的第一个软件。  BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 BIOS 设置的一块芯片，由于该芯片采用 CMOS 技术制成，因此也叫做 CMOS。 BIOS的引导方式分为两种：一种为传统的引导方式，即 Legacy 型，另一种为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WSL+HEXO+Github 搭建个人博客">
-<meta property="og:url" content="http://example.com/2021/01/17/13.WSL+HEXO+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="BIOS与引导">
+<meta property="og:url" content="http://example.com/2021/01/10/BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/index.html">
 <meta property="og:site_name" content="Macchiato&#39;s Blog">
-<meta property="og:description" content="安装依赖 安装 git：  1# apt install git 安装 Node.js：  12$ curl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_15.x | sudo -E bash -$ sudo apt-get install -y nodejs  为 npm 更换国内源：  1# npm config set regist">
+<meta property="og:description" content="BIOS BIOS（英文：Basic Input&#x2F;Output System），即基本输入输出系统。BIOS预安装在个人电脑的主板上，是个人电脑启动时加载的第一个软件。  BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 BIOS 设置的一块芯片，由于该芯片采用 CMOS 技术制成，因此也叫做 CMOS。 BIOS的引导方式分为两种：一种为传统的引导方式，即 Legacy 型，另一种为">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/null">
-<meta property="article:published_time" content="2021-01-17T14:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-22T14:18:29.551Z">
+<meta property="article:published_time" content="2021-01-10T14:00:00.000Z">
+<meta property="article:modified_time" content="2021-01-22T14:21:28.086Z">
 <meta property="article:author" content="Timmy Sun">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="WSL">
+<meta property="article:tag" content="引导">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/null">
 <meta name="twitter:site" content="@DrZomboss8">
@@ -109,17 +108,17 @@
     <article>
         <div class="kratos-hentry kratos-post-inner clearfix">
             <header class="kratos-entry-header">
-                <h1 class="kratos-entry-title text-center">WSL+HEXO+Github 搭建个人博客</h1>
+                <h1 class="kratos-entry-title text-center">BIOS与引导</h1>
                 
                 <div class="kratos-post-meta text-center">
                     <span>
-                        <i class="fa fa-calendar"></i> 2021-01-17
+                        <i class="fa fa-calendar"></i> 2021-01-10
                         <i class="fa fa-folder"></i> 分类 
                         <i class="fa fa-user"></i> 作者 Timmy Sun
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1244
+                            ~1.60K
                         
                         字
                         
@@ -128,50 +127,58 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1611325109551"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1611325288086"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
-                <h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><ol>
-<li><p>安装 git：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># apt install git</span><br></pre></td></tr></table></figure></li>
-<li><p>安装 Node.js：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ curl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_15.x | sudo -E bash -</span><br><span class="line">$ sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
-<p> 为 npm 更换国内源：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<p> 验证：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># npm config get registry</span><br></pre></td></tr></table></figure></li>
-<li><p>安装 Hexo：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
-<li><p>安装 Hexo-git 部署插件：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2></li>
-<li><p>创建一个文件夹来存放你的博客。</p>
-</li>
-<li><p>在博客文件夹路径执行以下语句初始化：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-<h2 id="配置-SSH-key"><a href="#配置-SSH-key" class="headerlink" title="配置 SSH key"></a>配置 SSH key</h2></li>
-<li><p>在 <code>~/.ssh/id_rsa.pub</code> 生成公钥文件：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C [邮件地址]</span><br></pre></td></tr></table></figure>
-<p> 连续三次回车即可创建。</p>
-</li>
-<li><p>找到公钥文件，打开并复制里面的内容，在 GitHub个人设置 -&gt; SSH and GPG keys -&gt; New SSH key 中粘贴。</p>
-</li>
-<li><p>测试是否成功：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<p> 回复 yes 后看到以下内容说明配置成功：</p>
-<blockquote>
-<p>Hi XXX! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+                <h1 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h1><blockquote>
+<p>BIOS（英文：Basic Input/Output System），即基本输入输出系统。BIOS预安装在个人电脑的主板上，是个人电脑启动时加载的第一个软件。</p>
 </blockquote>
-</li>
-<li><p>设置用户名和邮箱：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name [github 用户名]</span><br><span class="line">$ git config --global user.email [github 注册邮箱]</span><br></pre></td></tr></table></figure></li>
-<li><p>注：GitHub 必须存在一个以自己用户名为名的仓库。</p>
-</li>
+<p>BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 BIOS 设置的一块芯片，由于该芯片采用 CMOS 技术制成，因此也叫做 CMOS。</p>
+<p>BIOS的引导方式分为两种：一种为传统的引导方式，即 Legacy 型，另一种为 UEFI 型引导，它们直接的区别我们在下文会提到。</p>
+<h1 id="引导"><a href="#引导" class="headerlink" title="引导"></a>引导</h1><blockquote>
+<p>引导过程包括如下几个粗略的任务：</p>
+<ul>
+<li>查找、载入并执行引导代码；</li>
+<li>查找、载入并执行操作系统内核；</li>
+<li>运行启动脚本和系统守护进程；</li>
+<li>维护进程卫生，管理系统状态变化。此项任务会一直持续到系统关闭。</li>
+</ul>
+</blockquote>
+<h3 id="查找、载入并执行引导代码"><a href="#查找、载入并执行引导代码" class="headerlink" title="查找、载入并执行引导代码"></a>查找、载入并执行引导代码</h3><p><img src="booting.svg" alt="查找、载入并执行引导代码"></p>
+<ol>
+<li>系统上电后，CPU 会固定执行一段存储在 ROM 中的引导代码。</li>
+<li>BIOS 侦测硬件和硬盘并执行一些简单的健康检查。</li>
+<li>BIOS 根据硬件的启动顺序查找下一阶段的引导代码，启动顺序可以在 BIOS 设置中更改。</li>
 </ol>
-<h2 id="更改配置文件"><a href="#更改配置文件" class="headerlink" title="更改配置文件"></a>更改配置文件</h2><p>在站点配置文件中找到有关 deploy 的部分：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repository: git@github.com:[username]&#x2F;[username].git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
-<h2 id="hexo-的简单使用"><a href="#hexo-的简单使用" class="headerlink" title="hexo 的简单使用"></a>hexo 的简单使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g                &#x2F;&#x2F;生成静态网站文件</span><br><span class="line">$ hexo s                &#x2F;&#x2F;启动本地服务</span><br><span class="line">$ hexo d                &#x2F;&#x2F;部署至 GitHub 上</span><br><span class="line">$ hexo clean            &#x2F;&#x2F;删除 public 文件夹</span><br><span class="line">$ hexo new [blogname]   &#x2F;&#x2F;新建文章</span><br></pre></td></tr></table></figure>
+<p>如果使用传统 BIOS：</p>
+<ol start="4">
+<li>传统 BIOS 认为引导设备是以主引导记录（Master Boot Record，MBR）作为起始。 MBR 包括第二阶段的引导装载程序和一个原始的磁盘分区表。因此，BIOS 会按照在引导设备中找到 MBR 分区表，识别出磁盘的活动分区，读取并执行位于活动分区起始位置的第二阶段的引导装载程序。</li>
+</ol>
+<p>如果使用 UEFI 型引导：</p>
+<blockquote>
+<p>UEFI（Unified Extensible Firmware Interface，“统一可扩展固件接口”）<br>GUID（globally unique identifier，“全局唯一标识符”）<br>GPT（GUID Partition Table，“GUID 分区表”）<br>FAT（File Allocation Table，“文件分配表”）<br>ESP（EFI System Partition，“EFI 系统分区”）<br>4. UEFI 规范中包含了一个叫 GPT 的现代磁盘分区方案，能够理解 FAT 文件系统。因此，BIOS 会在引导设备中找到并查询 GPT 分区表来识别 ESP，然后在 ESP 中的文件里直接读取并执行配置好的目标应用。</p>
+</blockquote>
+<p>之后我们暂不讨论 Windows，只对 GRUB 和 Linux 进行分析。</p>
+<h3 id="查找、载入并执行操作系统内核"><a href="#查找、载入并执行操作系统内核" class="headerlink" title="查找、载入并执行操作系统内核"></a>查找、载入并执行操作系统内核</h3><p>通过 GRUB 可以选择内核，之后电脑就会载入并执行选择的操作系统内核。</p>
+<h3 id="运行启动脚本和系统守护进程"><a href="#运行启动脚本和系统守护进程" class="headerlink" title="运行启动脚本和系统守护进程"></a>运行启动脚本和系统守护进程</h3><p>内核加载完成后会运行初始化脚本，之后就会在用户空间创建自发进程。称之为自发进程是因为它是由内核自主启动的。其中一个自发进程就是系统管理守护进程，即 init。</p>
+<blockquote>
+<p>init 的功能有很多，其首要任务是确保系统在任何时刻都运行正确的服务和守护进程。<br>从引导到进入多用户模式的过程中，init 通常要做许多工作：</p>
+<ul>
+<li>设置计算机名；</li>
+<li>设置时区；</li>
+<li>使用 fsck 检查磁盘；</li>
+<li>挂载文件系统；</li>
+<li>删除 /tmp 目录中的陈旧文件；</li>
+<li>配置网络接口；</li>
+<li>配置分组过滤器；</li>
+<li>启动其他守护进程和网络服务。</li>
+</ul>
+</blockquote>
+<p>Linux 中 init 的实现方式有传统 init 和 systemd。传统 init 缺少一个能够描述服务之间关系的通用模型，因而所有的启动脚本和卸载脚本都只能以串行方式运行，systemd 就解决了这个问题。</p>
+<p>但在 Linux 圈子中，从 init 迁移到 systemd 是有史以来最激烈的一个争论，一些 Linux 发行版坚持永久保留传统 init，以示抗议。关于 systemd 的具体知识实在是有点复杂，在这里我先开个坑，之后会具体讲解。</p>
+<h3 id="维护进程卫生，管理系统状态变化"><a href="#维护进程卫生，管理系统状态变化" class="headerlink" title="维护进程卫生，管理系统状态变化"></a>维护进程卫生，管理系统状态变化</h3><p>参考资料：<a target="_blank" rel="noopener" href="https://www.amazon.cn/dp/0134277554">《 UNIX and Linux System Administration Handbook (5th Edition) 》</a></p>
+
             </div>
             
                 <div class="kratos-copyright text-center clearfix">
@@ -224,7 +231,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2021/01/17/13.WSL+HEXO+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/",
+                text: "http://example.com/2021/01/10/BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -236,13 +243,12 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2021/01/17/13.WSL+HEXO+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/";
-            const title         = "「WSL+HEXO+Github 搭建个人博客」";
-            const excerpt       = `安装依赖
-安装 git：
- 1# apt install git
-安装 Node.js：
- 12$ curl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_15.x | sud...`;
+            const hostUrl       = "http://example.com/2021/01/10/BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/";
+            const title         = "「BIOS与引导」";
+            const excerpt       = `BIOS
+BIOS（英文：Basic Input/Output System），即基本输入输出系统。BIOS预安装在个人电脑的主板上，是个人电脑启动时加载的第一个软件。
+
+BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 B...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -261,7 +267,7 @@
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/WSL/" rel="tag">WSL</a>
+                        <a class="tag-none-link" href="/tags/%E5%BC%95%E5%AF%BC/" rel="tag">引导</a>
                     </div>
                     <div class="pull-date">
                     <span>最后编辑：2021-01-22</span>
@@ -273,9 +279,13 @@
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
                 <div class="nav-previous clearfix">
-                    <a title=" BIOS与引导" href="/2021/01/10/12BIOS与引导/">&lt; 上一篇</a>
+                    <a title=" GRUB简介以及引导失败的解决方法" href="/2021/01/03/GRUB简介以及引导失败的解决方法/">&lt; 上一篇</a>
                 </div>
                 
+                
+                <div class="nav-next clearfix">
+                    <a title=" WSL+HEXO+Github 搭建个人博客" href="/2021/01/17/WSL+HEXO+Github搭建个人博客/">下一篇 &gt;</a>
+                </div>
                 
             </nav>
         
@@ -324,31 +334,31 @@
         
           
           
-            <a class="list-group-item" href="/2021/01/17/13.WSL+HEXO+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i class="fa  fa-book"></i> WSL+HEXO+Github 搭建个人博客</a>
+            <a class="list-group-item" href="/2021/01/24/Debian%20%E8%BF%9E%E6%8E%A5%E6%83%A0%E6%99%AE%E6%89%93%E5%8D%B0%E6%9C%BA%E5%B9%B6%E5%85%B1%E4%BA%AB/"><i class="fa  fa-book"></i> Debian 连接惠普打印机并共享</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/01/10/12BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/"><i class="fa  fa-book"></i> BIOS与引导</a>
+            <a class="list-group-item" href="/2021/01/17/WSL+HEXO+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i class="fa  fa-book"></i> WSL+HEXO+Github 搭建个人博客</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/01/03/11.GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><i class="fa  fa-book"></i> GRUB简介以及引导失败的解决方法</a>
+            <a class="list-group-item" href="/2021/01/10/BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/"><i class="fa  fa-book"></i> BIOS与引导</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2020/12/27/10.Arch%E5%AE%89%E8%A3%85/"><i class="fa  fa-book"></i> Arch安装</a>
+            <a class="list-group-item" href="/2021/01/03/GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><i class="fa  fa-book"></i> GRUB简介以及引导失败的解决方法</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2020/12/20/9.Linux%E5%91%BD%E4%BB%A4%E6%9F%A5%E8%AF%A2/"><i class="fa  fa-book"></i> Linux命令查询</a>
+            <a class="list-group-item" href="/2020/12/27/Arch%E5%AE%89%E8%A3%85/"><i class="fa  fa-book"></i> Arch安装</a>
             
           
         

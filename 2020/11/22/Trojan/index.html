@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="Linux, Network" />
   
-  <meta name="description" content="本文简介 原文：https:&#x2F;&#x2F;trojan-tutor.github.io&#x2F;2019&#x2F;04&#x2F;10&#x2F;p41.html 要求：Ubuntu 16.04+ &#x2F; Debian 9+ &#x2F; CentOS 7+ ，本文仅演示使用 apt 的包管理器。  购买一台VPS 国际比较有名的 VPS 厂商有：   BandWaGon:  https:&#x2F;&#x2F;bandwagonhost.com&#x2F;    Vultr:  ht">
+  <meta name="description" content="本文简介 原文：https:&#x2F;&#x2F;trojan-tutor.github.io&#x2F;2019&#x2F;04&#x2F;10&#x2F;p41.html 要求：Ubuntu 16.04+ &#x2F; Debian 9+ &#x2F; CentOS 7+ ，本文仅演示使用 apt 的包管理器。  购买一台 VPS 国际比较有名的 VPS 厂商有： BandWaGon: https:&#x2F;&#x2F;bandwagonhost.com&#x2F; Vultr: https:&#x2F;&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建 Trojan">
-<meta property="og:url" content="http://example.com/2020/11/22/5.Trojan/index.html">
+<meta property="og:url" content="http://example.com/2020/11/22/Trojan/index.html">
 <meta property="og:site_name" content="Macchiato&#39;s Blog">
-<meta property="og:description" content="本文简介 原文：https:&#x2F;&#x2F;trojan-tutor.github.io&#x2F;2019&#x2F;04&#x2F;10&#x2F;p41.html 要求：Ubuntu 16.04+ &#x2F; Debian 9+ &#x2F; CentOS 7+ ，本文仅演示使用 apt 的包管理器。  购买一台VPS 国际比较有名的 VPS 厂商有：   BandWaGon:  https:&#x2F;&#x2F;bandwagonhost.com&#x2F;    Vultr:  ht">
+<meta property="og:description" content="本文简介 原文：https:&#x2F;&#x2F;trojan-tutor.github.io&#x2F;2019&#x2F;04&#x2F;10&#x2F;p41.html 要求：Ubuntu 16.04+ &#x2F; Debian 9+ &#x2F; CentOS 7+ ，本文仅演示使用 apt 的包管理器。  购买一台 VPS 国际比较有名的 VPS 厂商有： BandWaGon: https:&#x2F;&#x2F;bandwagonhost.com&#x2F; Vultr: https:&#x2F;&#x2F;">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/null">
 <meta property="article:published_time" content="2020-11-22T14:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-22T14:32:27.765Z">
+<meta property="article:modified_time" content="2021-02-27T16:13:54.280Z">
 <meta property="article:author" content="Timmy Sun">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Network">
@@ -119,7 +119,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~5.19K
+                            ~5.31K
                         
                         字
                         
@@ -128,7 +128,7 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1611325947765"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1614442434280"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
@@ -136,131 +136,135 @@
 <li>原文：<a target="_blank" rel="noopener" href="https://trojan-tutor.github.io/2019/04/10/p41.html">https://trojan-tutor.github.io/2019/04/10/p41.html</a></li>
 <li>要求：Ubuntu 16.04+ / Debian 9+ / CentOS 7+ ，本文仅演示使用 apt 的包管理器。</li>
 </ul>
-<h2 id="购买一台VPS"><a href="#购买一台VPS" class="headerlink" title="购买一台VPS"></a>购买一台VPS</h2><ul>
+<h2 id="购买一台-VPS"><a href="#购买一台-VPS" class="headerlink" title="购买一台 VPS"></a>购买一台 VPS</h2><ul>
 <li><p>国际比较有名的 VPS 厂商有：</p>
-<p>  <strong>BandWaGon</strong>:  <a target="_blank" rel="noopener" href="https://bandwagonhost.com/">https://bandwagonhost.com/</a> </p>
-<p>  <strong>Vultr</strong>:  <a target="_blank" rel="noopener" href="https://www.vultr.com/">https://www.vultr.com/</a>  </p>
+<p><strong>BandWaGon</strong>: <a target="_blank" rel="noopener" href="https://bandwagonhost.com/">https://bandwagonhost.com/</a></p>
+<p><strong>Vultr</strong>: <a target="_blank" rel="noopener" href="https://www.vultr.com/">https://www.vultr.com/</a></p>
 </li>
 </ul>
 <h2 id="购买并解析域名"><a href="#购买并解析域名" class="headerlink" title="购买并解析域名"></a>购买并解析域名</h2><p>购买一个域名并解析，地址为 VPS 的公网 IP 地址。</p>
 <h2 id="连接-VPS"><a href="#连接-VPS" class="headerlink" title="连接 VPS"></a>连接 VPS</h2><ol>
 <li><p>如果有必要，重装 VPS 系统。</p>
 </li>
-<li><p>取得IP地址<code>Public IP address</code>和端口号<code>SSH Port</code>并记录密码。</p>
+<li><p>取得 IP 地址<code>Public IP address</code>和端口号<code>SSH Port</code>并记录密码。</p>
 </li>
-<li><p>Windows连接 VPS 需要下载 <a target="_blank" rel="noopener" href="https://xshell.en.softonic.com/">Xshell</a> 或 <a target="_blank" rel="noopener" href="https://www.putty.org/">PuTTY</a> 。</p>
+<li><p>Windows 连接 VPS 需要下载 <a target="_blank" rel="noopener" href="https://xshell.en.softonic.com/">Xshell</a> 或 <a target="_blank" rel="noopener" href="https://www.putty.org/">PuTTY</a> 。</p>
 </li>
 <li><p>以 Xshell 为例，<code>File|New</code>：</p>
-<p> <code>Name</code>随便写；</p>
-<p> <code>Protocol</code>默认<code>SSH</code>；</p>
-<p> <code>Host</code>填入IP地址；</p>
-<p> <code>Port Number</code>填入端口号。</p>
-<p> 点击确认，在弹出窗口中输入用户名和密码，用户名默认为<code>root</code>。若没有出现弹窗，说明 VPS 被墙。</p>
-<p> 命令行窗口显示：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@XXX:~# </span><br></pre></td></tr></table></figure>
-<p> 说明连接成功。</p>
+<p><code>Name</code>随便写；</p>
+<p><code>Protocol</code>默认<code>SSH</code>；</p>
+<p><code>Host</code>填入 IP 地址；</p>
+<p><code>Port Number</code>填入端口号。</p>
+<p>点击确认，在弹出窗口中输入用户名和密码，用户名默认为<code>root</code>。若没有出现弹窗，说明 VPS 被墙。</p>
+<p>命令行窗口显示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@XXX:~#</span><br></pre></td></tr></table></figure>
+<p>说明连接成功。</p>
 </li>
 </ol>
 <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ol>
 <li><p>创建用户组<code>certusers</code>：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># groupadd certusers</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo groupadd certusers</span><br></pre></td></tr></table></figure></li>
 <li><p>创建<code>trojan</code>和<code>acme</code>：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># useradd -r -M -G certusers trojan</span><br><span class="line"># useradd -r -m -G certusers acme</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo useradd -r -M -G certusers trojan</span><br><span class="line">sudo useradd -r -m -G certusers acme</span><br></pre></td></tr></table></figure></li>
 <li><p>更新源：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># apt update</span><br><span class="line"># apt upgrade -y</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade -y</span><br></pre></td></tr></table></figure></li>
 <li><p>安装 acme.sh 需要的依赖：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># apt install -y socat cron curl</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y socat cron curl</span><br></pre></td></tr></table></figure></li>
 <li><p>启动 crontab：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># systemctl start cron</span><br><span class="line"># systemctl enable cron</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start cron</span><br><span class="line">sudo systemctl enable cron</span><br></pre></td></tr></table></figure></li>
 <li><p>安装 Trojan 需要的依赖：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># apt install -y libcap2-bin xz-utils nano</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y libcap2-bin xz-utils nano</span><br></pre></td></tr></table></figure></li>
 <li><p>安装 Nginx：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># apt install -y nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y nginx</span><br></pre></td></tr></table></figure>
 <h2 id="配置-Nginx"><a href="#配置-Nginx" class="headerlink" title="配置 Nginx"></a>配置 Nginx</h2></li>
-<li><p>关闭Nginx默认虚拟主机：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># rm &#x2F;etc&#x2F;nginx&#x2F;sites-enabled&#x2F;default</span><br></pre></td></tr></table></figure></li>
-<li><p>修改Nginx配置文件，<code>&lt;tdom.ml&gt;</code>改为自己的域名：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim &#x2F;etc&#x2F;nginx&#x2F;sites-available&#x2F;&lt;tdom.ml&gt;</span><br></pre></td></tr></table></figure>
-<p> 要修改的内容包括：</p>
+<li><p>关闭 Nginx 默认虚拟主机：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm &#x2F;etc&#x2F;nginx&#x2F;sites-enabled&#x2F;default</span><br></pre></td></tr></table></figure></li>
+<li><p>修改 Nginx 配置文件，<code>&lt;tdom.ml&gt;</code>改为自己的域名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;nginx&#x2F;sites-available&#x2F;&lt;tdom.ml&gt;</span><br></pre></td></tr></table></figure>
+<p>要修改的内容包括：</p>
 <ul>
-<li><p>第4行的<code>server_name</code>的值<code>&lt;tdom.ml&gt;</code>改为你自己的域名；</p>
+<li><p>第 4 行的<code>server_name</code>的值<code>&lt;tdom.ml&gt;</code>改为你自己的域名；</p>
 </li>
-<li><p>第7行的<code>proxy_pass</code>随便指向一个没有敏感信息的网站，<a target="_blank" rel="noopener" href="https://trojan-tutor.github.io/2019/04/10/p41.html">原文</a>使用的是RFC文档的地址；</p>
+<li><p>第 7 行的<code>proxy_pass</code>随便指向一个没有敏感信息的网站，<a target="_blank" rel="noopener" href="https://trojan-tutor.github.io/2019/04/10/p41.html">原文</a>使用的是 RFC 文档的地址；</p>
 </li>
-<li><p>第15行的<code>server_name</code>的值<code>&lt;10.10.10.10&gt;</code>改为你自己的IP；</p>
+<li><p>第 15 行的<code>server_name</code>的值<code>&lt;10.10.10.10&gt;</code>改为你自己的 IP；</p>
 </li>
-<li><p>第17行<code>&lt;tdom.ml&gt;</code>改为自己的域名。</p>
-  <figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">listen 127.0.0.1:80 default_server;</span><br><span class="line">server_name &lt;tdom.ml&gt;;</span><br><span class="line">location / &#123;</span><br><span class="line">    proxy_pass https://www.ietf.org;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">listen 127.0.0.1:80;</span><br><span class="line">server_name &lt;10.10.10.10&gt;;</span><br><span class="line"><span class="built_in">return</span> 301 https://&lt;tdom.ml&gt;<span class="variable">$request_uri</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">listen 0.0.0.0:80;</span><br><span class="line">listen [::]:80;</span><br><span class="line">server_name _;</span><br><span class="line">location / &#123;</span><br><span class="line">    <span class="built_in">return</span> 301 https://$host<span class="variable">$request_uri</span>;</span><br><span class="line">&#125;</span><br><span class="line">location /.well-known/acme-challenge &#123;</span><br><span class="line">    root /var/www/acme-challenge;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>第 17 行<code>&lt;tdom.ml&gt;</code>改为自己的域名。</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">listen 127.0.0.1:80 default_server;</span><br><span class="line">server_name &lt;tdom.ml&gt;;</span><br><span class="line">location / &#123;</span><br><span class="line">    proxy_pass https://www.ietf.org;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">listen 127.0.0.1:80;</span><br><span class="line">server_name &lt;10.10.10.10&gt;;</span><br><span class="line"><span class="built_in">return</span> 301 https://&lt;tdom.ml&gt;<span class="variable">$request_uri</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">listen 0.0.0.0:80;</span><br><span class="line">listen [::]:80;</span><br><span class="line">server_name _;</span><br><span class="line">location / &#123;</span><br><span class="line">    <span class="built_in">return</span> 301 https://$host<span class="variable">$request_uri</span>;</span><br><span class="line">&#125;</span><br><span class="line">location /.well-known/acme-challenge &#123;</span><br><span class="line">    root /var/www/acme-challenge;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>使能配置文件，<code>&lt;tdom.ml&gt;</code>改为自己域名：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ln -s &#x2F;etc&#x2F;nginx&#x2F;sites-available&#x2F;&lt;tdom.ml&gt; &#x2F;etc&#x2F;nginx&#x2F;sites-enabled&#x2F;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s &#x2F;etc&#x2F;nginx&#x2F;sites-available&#x2F;&lt;tdom.ml&gt; &#x2F;etc&#x2F;nginx&#x2F;sites-enabled&#x2F;</span><br></pre></td></tr></table></figure></li>
 <li><p>启动 Nginx：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># systemctl restart nginx</span><br><span class="line"># systemctl status nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart nginx</span><br><span class="line">sudo systemctl status nginx</span><br></pre></td></tr></table></figure>
 <h2 id="配置证书"><a href="#配置证书" class="headerlink" title="配置证书"></a>配置证书</h2></li>
 <li><p>新建一个文件夹用于存放证书：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># mkdir -p &#x2F;etc&#x2F;letsencrypt&#x2F;live</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p &#x2F;etc&#x2F;letsencrypt&#x2F;live</span><br></pre></td></tr></table></figure></li>
 <li><p>将证书文件夹所有者改为<code>acme</code>，使得用户<code>acme</code>有权限写入证书：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># chown -R acme:acme &#x2F;etc&#x2F;letsencrypt&#x2F;live</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R acme:acme &#x2F;etc&#x2F;letsencrypt&#x2F;live</span><br></pre></td></tr></table></figure></li>
 <li><p>运行下述命令查找<code>nginx: worker process</code>所属用户：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps -eo user,command|grep nginx</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -eo user,command|grep nginx</span><br></pre></td></tr></table></figure></li>
 <li><p>上述命令输出第二行第一列即为<code>nginx: worker process</code>所属用户，然后根据实际情况，运行下面三个命令之一：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># usermod -G certusers www-data</span><br></pre></td></tr></table></figure>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># usermod -G certusers nginx</span><br></pre></td></tr></table></figure>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># usermod -G certusers nobody</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo usermod -G certusers www-data</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo usermod -G certusers nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo usermod -G certusers nobody</span><br></pre></td></tr></table></figure></li>
 <li><p>新建一个文件夹用于给<code>acme.sh</code>存放域名验证文件：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># mkdir -p  &#x2F;var&#x2F;www&#x2F;acme-challenge</span><br></pre></td></tr></table></figure></li>
-<li><p>将证书文件夹所有者改为<code>acme</code>，使得用户<code>acme</code>有权限写入文件，同时当验证的时候Nginx可以读取该文件：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># chown -R acme:certusers &#x2F;var&#x2F;www&#x2F;acme-challenge</span><br></pre></td></tr></table></figure></li>
-<li><p>安装<code>acme.sh</code>自动管理CA证书脚本，切换到用户<code>acme</code>安装<code>acme.sh</code>并重新登录：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># su -l -s &#x2F;bin&#x2F;bash acme</span><br><span class="line">$ curl  https:&#x2F;&#x2F;get.acme.sh | sh</span><br><span class="line">$ exit</span><br><span class="line"># su -l -s &#x2F;bin&#x2F;bash acme</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p  &#x2F;var&#x2F;www&#x2F;acme-challenge</span><br></pre></td></tr></table></figure></li>
+<li><p>将证书文件夹所有者改为<code>acme</code>，使得用户<code>acme</code>有权限写入文件，同时当验证的时候 Nginx 可以读取该文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R acme:certusers &#x2F;var&#x2F;www&#x2F;acme-challenge</span><br></pre></td></tr></table></figure></li>
+<li><p>安装<code>acme.sh</code>自动管理 CA 证书脚本，切换到用户<code>acme</code>安装<code>acme.sh</code>并重新登录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo su -l -s &#x2F;bin&#x2F;bash acme</span><br><span class="line">curl  https:&#x2F;&#x2F;get.acme.sh | sh</span><br><span class="line">exit</span><br><span class="line">sudo su -l -s &#x2F;bin&#x2F;bash acme</span><br></pre></td></tr></table></figure></li>
 <li><p>申请证书：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ acme.sh --issue -d &lt;tdom.ml&gt; -w &#x2F;var&#x2F;www&#x2F;acme-challenge</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --issue -d &lt;tdom.ml&gt; -w &#x2F;var&#x2F;www&#x2F;acme-challenge</span><br></pre></td></tr></table></figure></li>
 <li><p>安装证书，<code>&lt;tdom.ml&gt;</code>改为自己域名：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ acme.sh --install-cert -d &lt;tdom.ml&gt; --key-file &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;private.key --fullchain-file &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;certificate.crt</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --install-cert -d &lt;tdom.ml&gt; --key-file &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;private.key --fullchain-file &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;certificate.crt</span><br></pre></td></tr></table></figure></li>
 <li><p>配置<code>acme.sh</code>自动更新和自动更新证书：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ acme.sh  --upgrade  --auto-upgrade</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh  --upgrade  --auto-upgrade</span><br></pre></td></tr></table></figure></li>
 <li><p>修改权限：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ chown -R acme:certusers &#x2F;etc&#x2F;letsencrypt&#x2F;live</span><br><span class="line">$ chmod -R 750 &#x2F;etc&#x2F;letsencrypt&#x2F;live</span><br><span class="line">$ exit</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chown -R acme:certusers &#x2F;etc&#x2F;letsencrypt&#x2F;live</span><br><span class="line">chmod -R 750 &#x2F;etc&#x2F;letsencrypt&#x2F;live</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
 <h2 id="配置-Trojan"><a href="#配置-Trojan" class="headerlink" title="配置 Trojan"></a>配置 Trojan</h2></li>
 <li><p>安装 Trojan：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;trojan-gfw&#x2F;trojan-quickstart&#x2F;master&#x2F;trojan-quickstart.sh)&quot;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;trojan-gfw&#x2F;trojan-quickstart&#x2F;master&#x2F;trojan-quickstart.sh)&quot;</span><br></pre></td></tr></table></figure></li>
 <li><p>修改权限，备份并修改配置文件：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># chown -R trojan:trojan &#x2F;usr&#x2F;local&#x2F;etc&#x2F;trojan</span><br><span class="line"># cp &#x2F;usr&#x2F;local&#x2F;etc&#x2F;trojan&#x2F;config.json &#x2F;usr&#x2F;local&#x2F;etc&#x2F;trojan&#x2F;config.json.bak</span><br><span class="line"># vim &#x2F;usr&#x2F;local&#x2F;etc&#x2F;trojan&#x2F;config.json</span><br></pre></td></tr></table></figure>
-<p> 修改<code>password</code>、<code>cert</code>和<code>key</code>。<code>cert</code>改为<code>/etc/letsencrypt/live/certificate.crt</code>，<code>key</code>改为<code>/etc/letsencrypt/live/private.key</code>。如果有IPv6地址，将<code>local_addr</code>的<code>0.0.0.0</code>改为<code>::</code>才可以使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R trojan:trojan &#x2F;usr&#x2F;local&#x2F;etc&#x2F;trojan</span><br><span class="line">sudo cp &#x2F;usr&#x2F;local&#x2F;etc&#x2F;trojan&#x2F;config.json &#x2F;usr&#x2F;local&#x2F;etc&#x2F;trojan&#x2F;config.json.bak</span><br><span class="line">sudo vim &#x2F;usr&#x2F;local&#x2F;etc&#x2F;trojan&#x2F;config.json</span><br></pre></td></tr></table></figure>
+<p>修改<code>password</code>、<code>cert</code>和<code>key</code>。<code>cert</code>改为<code>/etc/letsencrypt/live/certificate.crt</code>，<code>key</code>改为<code>/etc/letsencrypt/live/private.key</code>。如果有 IPv6 地址，将<code>local_addr</code>的<code>0.0.0.0</code>改为<code>::</code>才可以使用。</p>
 </li>
 <li><p>执行如下命令，打开<code>trojan.service</code>文件，并将用户修改为<code>trojan</code>，等号旁边没有空格：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># nano &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;trojan.service</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;trojan.service</span><br></pre></td></tr></table></figure></li>
 <li><p>重新加载配置文件：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># systemctl daemon-reload</span><br></pre></td></tr></table></figure></li>
-<li><p>赋予Trojan监听443端口能力：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># setcap CAP_NET_BIND_SERVICE&#x3D;+eip &#x2F;usr&#x2F;local&#x2F;bin&#x2F;trojan</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br></pre></td></tr></table></figure></li>
+<li><p>赋予 Trojan 监听 443 端口能力：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo setcap CAP_NET_BIND_SERVICE&#x3D;+eip &#x2F;usr&#x2F;local&#x2F;bin&#x2F;trojan</span><br></pre></td></tr></table></figure></li>
 <li><p>启动 Trojan 并查看状态：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># systemctl restart trojan</span><br><span class="line"># systemctl status trojan</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart trojan</span><br><span class="line">sudo systemctl status trojan</span><br></pre></td></tr></table></figure></li>
 <li><p>给用户<code>trojan</code>添加定时任务，使其每个月检测更新一次证书：</p>
 </li>
 </ol>
 <ul>
-<li>编辑用户<code>trojan</code>的<code>crontab</code>文件：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># -u trojan crontab -e</span><br></pre></td></tr></table></figure></li>
-<li>在文件末尾添加一行如下：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 0 1 * * killall -s SIGUSR1 trojan</span><br></pre></td></tr></table></figure></li>
+<li><p>编辑用户<code>trojan</code>的<code>crontab</code>文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u trojan crontab -e</span><br></pre></td></tr></table></figure></li>
+<li><p>在文件末尾添加一行如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 0 1 * * killall -s SIGUSR1 trojan</span><br></pre></td></tr></table></figure></li>
 </ul>
 <ol start="8">
-<li>执行以下命令更新 Trojan，中间全部回答”N”： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;trojan-gfw&#x2F;trojan-quickstart&#x2F;master&#x2F;trojan-quickstart.sh)&quot;</span><br><span class="line"># setcap CAP_NET_BIND_SERVICE&#x3D;+eip &#x2F;usr&#x2F;local&#x2F;bin&#x2F;trojan</span><br><span class="line"># systemctl restart trojan</span><br></pre></td></tr></table></figure></li>
-<li>配置Trojan和Nginx开机自启： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># systemctl enable trojan</span><br><span class="line"># systemctl enable nginx</span><br></pre></td></tr></table></figure>
+<li><p>执行以下命令更新 Trojan，中间全部回答”N”：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;trojan-gfw&#x2F;trojan-quickstart&#x2F;master&#x2F;trojan-quickstart.sh)&quot;</span><br><span class="line">sudo setcap CAP_NET_BIND_SERVICE&#x3D;+eip &#x2F;usr&#x2F;local&#x2F;bin&#x2F;trojan</span><br><span class="line">sudo systemctl restart trojan</span><br></pre></td></tr></table></figure></li>
+<li><p>配置 Trojan 和 Nginx 开机自启：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable trojan</span><br><span class="line">sudo systemctl enable nginx</span><br></pre></td></tr></table></figure>
 <h2 id="启用-BBR"><a href="#启用-BBR" class="headerlink" title="启用 BBR"></a>启用 BBR</h2></li>
 </ol>
 <ul>
-<li><p>启动bbr需要Linux内核版本在4.10及以上，查看系统内核版本命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ uname -a</span><br></pre></td></tr></table></figure></li>
-<li><p>执行下面命令查看当前系统是否启用bbr：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># sysctl net.ipv4.tcp_congestion_control</span><br></pre></td></tr></table></figure>
-<p>执行完成之后如果提示<code>net.ipv4.tcp_congestion_control = bbr</code>即表示启动了bbr，</p>
+<li><p>启动 bbr 需要 Linux 内核版本在 4.10 及以上，查看系统内核版本命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -a</span><br></pre></td></tr></table></figure></li>
+<li><p>执行下面命令查看当前系统是否启用 bbr：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sysctl net.ipv4.tcp_congestion_control</span><br></pre></td></tr></table></figure>
+<p>执行完成之后如果提示<code>net.ipv4.tcp_congestion_control = bbr</code>即表示启动了 bbr，</p>
 </li>
-<li><p>执行以下命令启动bbr，检查启动状态同上：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># bash -c &#39;echo &quot;net.core.default_qdisc&#x3D;fq&quot; &gt;&gt; &#x2F;etc&#x2F;sysctl.conf&#39;</span><br><span class="line"># bash -c &#39;echo &quot;net.ipv4.tcp_congestion_control&#x3D;bbr&quot; &gt;&gt; &#x2F;etc&#x2F;sysctl.conf&#39;</span><br><span class="line"># sysctl -p</span><br></pre></td></tr></table></figure>
+<li><p>执行以下命令启动 bbr，检查启动状态同上：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo bash -c &#39;echo &quot;net.core.default_qdisc&#x3D;fq&quot; &gt;&gt; &#x2F;etc&#x2F;sysctl.conf&#39;</span><br><span class="line">sudo bash -c &#39;echo &quot;net.ipv4.tcp_congestion_control&#x3D;bbr&quot; &gt;&gt; &#x2F;etc&#x2F;sysctl.conf&#39;</span><br><span class="line">sudo sysctl -p</span><br></pre></td></tr></table></figure>
 <h2 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h2></li>
 </ul>
-<p>配置客户端所需的密码为自己设置的密码，端口为443。</p>
+<p>配置客户端所需的密码为自己设置的密码，端口为 443。</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/Fndroid/clash_for_windows_pkg/releases/tag/0.11.7">Clash for Windows</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/NetchX/Netch/releases">Netch</a></li>
@@ -319,7 +323,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2020/11/22/5.Trojan/",
+                text: "http://example.com/2020/11/22/Trojan/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -331,7 +335,7 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2020/11/22/5.Trojan/";
+            const hostUrl       = "http://example.com/2020/11/22/Trojan/";
             const title         = "「搭建 Trojan」";
             const excerpt       = `本文简介
 原文：https://trojan-tutor.github.io/2019/04/10/p41.html
@@ -357,7 +361,7 @@
                         <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Network/" rel="tag">Network</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2021-01-22</span>
+                    <span>最后编辑：2021-02-28</span>
                     </div>
                 </div>
             </footer>
@@ -366,12 +370,12 @@
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
                 <div class="nav-previous clearfix">
-                    <a title=" 一键脚本搭建WS+Tls+V2ray" href="/2020/11/15/4.一键脚本搭建Ws+Tls+V2ray/">&lt; 上一篇</a>
+                    <a title=" 一键脚本搭建WS+Tls+V2ray" href="/2020/11/15/一键脚本搭建Ws+Tls+V2ray/">&lt; 上一篇</a>
                 </div>
                 
                 
                 <div class="nav-next clearfix">
-                    <a title=" 免费无版权插画网站" href="/2020/11/29/6.免费无版权插画网站/">下一篇 &gt;</a>
+                    <a title=" 免费无版权插画网站" href="/2020/11/29/免费无版权插画网站/">下一篇 &gt;</a>
                 </div>
                 
             </nav>
@@ -421,31 +425,31 @@
         
           
           
-            <a class="list-group-item" href="/2021/01/17/13.WSL+HEXO+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i class="fa  fa-book"></i> WSL+HEXO+Github 搭建个人博客</a>
+            <a class="list-group-item" href="/2021/01/24/Debian%20%E8%BF%9E%E6%8E%A5%E6%83%A0%E6%99%AE%E6%89%93%E5%8D%B0%E6%9C%BA%E5%B9%B6%E5%85%B1%E4%BA%AB/"><i class="fa  fa-book"></i> Debian 连接惠普打印机并共享</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/01/10/12BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/"><i class="fa  fa-book"></i> BIOS与引导</a>
+            <a class="list-group-item" href="/2021/01/17/WSL+HEXO+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i class="fa  fa-book"></i> WSL+HEXO+Github 搭建个人博客</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/01/03/11.GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><i class="fa  fa-book"></i> GRUB简介以及引导失败的解决方法</a>
+            <a class="list-group-item" href="/2021/01/10/BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/"><i class="fa  fa-book"></i> BIOS与引导</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2020/12/27/10.Arch%E5%AE%89%E8%A3%85/"><i class="fa  fa-book"></i> Arch安装</a>
+            <a class="list-group-item" href="/2021/01/03/GRUB%E7%AE%80%E4%BB%8B%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%AF%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><i class="fa  fa-book"></i> GRUB简介以及引导失败的解决方法</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2020/12/20/9.Linux%E5%91%BD%E4%BB%A4%E6%9F%A5%E8%AF%A2/"><i class="fa  fa-book"></i> Linux命令查询</a>
+            <a class="list-group-item" href="/2020/12/27/Arch%E5%AE%89%E8%A3%85/"><i class="fa  fa-book"></i> Arch安装</a>
             
           
         
