@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="引导" />
   
-  <meta name="description" content="BIOS BIOS（英文：Basic Input&#x2F;Output System），即基本输入输出系统。BIOS预安装在个人电脑的主板上，是个人电脑启动时加载的第一个软件。  BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 BIOS 设置的一块芯片，由于该芯片采用 CMOS 技术制成，因此也叫做 CMOS。 BIOS的引导方式分为两种：一种为传统的引导方式，即 Legacy 型，另一种为">
+  <meta name="description" content="BIOS BIOS（英文：Basic Input&#x2F;Output System），即基本输入输出系统。BIOS 预安装在个人电脑的主板上，是个人电脑启动时加载的第一个软件。  BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 BIOS 设置的一块芯片，由于该芯片采用 CMOS 技术制成，因此也叫做 CMOS。 BIOS 的引导方式分为两种：一种为传统的引导方式，即 Legacy 型，另一种">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BIOS与引导">
 <meta property="og:url" content="http://example.com/2021/01/10/BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/index.html">
 <meta property="og:site_name" content="Macchiato&#39;s Blog">
-<meta property="og:description" content="BIOS BIOS（英文：Basic Input&#x2F;Output System），即基本输入输出系统。BIOS预安装在个人电脑的主板上，是个人电脑启动时加载的第一个软件。  BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 BIOS 设置的一块芯片，由于该芯片采用 CMOS 技术制成，因此也叫做 CMOS。 BIOS的引导方式分为两种：一种为传统的引导方式，即 Legacy 型，另一种为">
+<meta property="og:description" content="BIOS BIOS（英文：Basic Input&#x2F;Output System），即基本输入输出系统。BIOS 预安装在个人电脑的主板上，是个人电脑启动时加载的第一个软件。  BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 BIOS 设置的一块芯片，由于该芯片采用 CMOS 技术制成，因此也叫做 CMOS。 BIOS 的引导方式分为两种：一种为传统的引导方式，即 Legacy 型，另一种">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/null">
 <meta property="article:published_time" content="2021-01-10T14:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-22T14:21:28.086Z">
+<meta property="article:modified_time" content="2021-05-05T08:27:07.369Z">
 <meta property="article:author" content="Timmy Sun">
 <meta property="article:tag" content="引导">
 <meta name="twitter:card" content="summary">
@@ -127,15 +127,15 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1611325288086"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1620203227369"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
                 <h1 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h1><blockquote>
-<p>BIOS（英文：Basic Input/Output System），即基本输入输出系统。BIOS预安装在个人电脑的主板上，是个人电脑启动时加载的第一个软件。</p>
+<p>BIOS（英文：Basic Input/Output System），即基本输入输出系统。BIOS 预安装在个人电脑的主板上，是个人电脑启动时加载的第一个软件。</p>
 </blockquote>
 <p>BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 BIOS 设置的一块芯片，由于该芯片采用 CMOS 技术制成，因此也叫做 CMOS。</p>
-<p>BIOS的引导方式分为两种：一种为传统的引导方式，即 Legacy 型，另一种为 UEFI 型引导，它们直接的区别我们在下文会提到。</p>
+<p>BIOS 的引导方式分为两种：一种为传统的引导方式，即 Legacy 型，另一种为 UEFI 型引导，它们直接的区别我们在下文会提到。</p>
 <h1 id="引导"><a href="#引导" class="headerlink" title="引导"></a>引导</h1><blockquote>
 <p>引导过程包括如下几个粗略的任务：</p>
 <ul>
@@ -145,8 +145,7 @@
 <li>维护进程卫生，管理系统状态变化。此项任务会一直持续到系统关闭。</li>
 </ul>
 </blockquote>
-<h3 id="查找、载入并执行引导代码"><a href="#查找、载入并执行引导代码" class="headerlink" title="查找、载入并执行引导代码"></a>查找、载入并执行引导代码</h3><p><img src="booting.svg" alt="查找、载入并执行引导代码"></p>
-<ol>
+<h3 id="查找、载入并执行引导代码"><a href="#查找、载入并执行引导代码" class="headerlink" title="查找、载入并执行引导代码"></a>查找、载入并执行引导代码</h3><ol>
 <li>系统上电后，CPU 会固定执行一段存储在 ROM 中的引导代码。</li>
 <li>BIOS 侦测硬件和硬盘并执行一些简单的健康检查。</li>
 <li>BIOS 根据硬件的启动顺序查找下一阶段的引导代码，启动顺序可以在 BIOS 设置中更改。</li>
@@ -157,7 +156,7 @@
 </ol>
 <p>如果使用 UEFI 型引导：</p>
 <blockquote>
-<p>UEFI（Unified Extensible Firmware Interface，“统一可扩展固件接口”）<br>GUID（globally unique identifier，“全局唯一标识符”）<br>GPT（GUID Partition Table，“GUID 分区表”）<br>FAT（File Allocation Table，“文件分配表”）<br>ESP（EFI System Partition，“EFI 系统分区”）<br>4. UEFI 规范中包含了一个叫 GPT 的现代磁盘分区方案，能够理解 FAT 文件系统。因此，BIOS 会在引导设备中找到并查询 GPT 分区表来识别 ESP，然后在 ESP 中的文件里直接读取并执行配置好的目标应用。</p>
+<p>UEFI（Unified Extensible Firmware Interface，“统一可扩展固件接口”）<br>GUID（globally unique identifier，“全局唯一标识符”）<br>GPT（GUID Partition Table，“GUID 分区表”）<br>FAT（File Allocation Table，“文件分配表”）<br>ESP（EFI System Partition，“EFI 系统分区”） 4. UEFI 规范中包含了一个叫 GPT 的现代磁盘分区方案，能够理解 FAT 文件系统。因此，BIOS 会在引导设备中找到并查询 GPT 分区表来识别 ESP，然后在 ESP 中的文件里直接读取并执行配置好的目标应用。</p>
 </blockquote>
 <p>之后我们暂不讨论 Windows，只对 GRUB 和 Linux 进行分析。</p>
 <h3 id="查找、载入并执行操作系统内核"><a href="#查找、载入并执行操作系统内核" class="headerlink" title="查找、载入并执行操作系统内核"></a>查找、载入并执行操作系统内核</h3><p>通过 GRUB 可以选择内核，之后电脑就会载入并执行选择的操作系统内核。</p>
@@ -246,9 +245,9 @@
             const hostUrl       = "http://example.com/2021/01/10/BIOS%E4%B8%8E%E5%BC%95%E5%AF%BC/";
             const title         = "「BIOS与引导」";
             const excerpt       = `BIOS
-BIOS（英文：Basic Input/Output System），即基本输入输出系统。BIOS预安装在个人电脑的主板上，是个人电脑启动时加载的第一个软件。
+BIOS（英文：Basic Input/Output System），即基本输入输出系统。BIOS 预安装在个人电脑的主板上，是个人电脑启动时加载的第一个软件。
 
-BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 B...`;
+BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 ...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -270,7 +269,7 @@ BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 B...`;
                         <a class="tag-none-link" href="/tags/%E5%BC%95%E5%AF%BC/" rel="tag">引导</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2021-01-22</span>
+                    <span>最后编辑：2021-05-05</span>
                     </div>
                 </div>
             </footer>
@@ -320,7 +319,7 @@ BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 B...`;
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/Arch/" style="font-size: 0.6em;">Arch</a> <a href="/tags/Code/" style="font-size: 0.6em;">Code</a> <a href="/tags/Linux/" style="font-size: 0.8em;">Linux</a> <a href="/tags/Network/" style="font-size: 0.73em;">Network</a> <a href="/tags/WSL/" style="font-size: 0.6em;">WSL</a> <a href="/tags/%E5%BC%95%E5%AF%BC/" style="font-size: 0.67em;">引导</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 0.6em;">资源</a>
+        <a href="/tags/Arch/" style="font-size: 0.6em;">Arch</a> <a href="/tags/Linux/" style="font-size: 0.8em;">Linux</a> <a href="/tags/Network/" style="font-size: 0.7em;">Network</a> <a href="/tags/WSL/" style="font-size: 0.6em;">WSL</a> <a href="/tags/%E5%BC%95%E5%AF%BC/" style="font-size: 0.7em;">引导</a>
       </div>
   </aside>
 
@@ -362,12 +361,6 @@ BIOS 设置存放在 CMOS 中。CMOS 是主板中存储 B...`;
             
           
         
-          
-            
-          
-            
-          
-            
           
             
           
