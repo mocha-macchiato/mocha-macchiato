@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>Debian 安装后的一些问题 | Macchiato's Blog</title>
+  <title>Debian 安装 mysql | Macchiato's Blog</title>
   <meta name="author" content="Timmy Sun" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="Linux" />
   
-  <meta name="description" content="写在前面我个人最常用的 Linux 发行版是 debian，因为我觉得它比 Ubuntu 更轻量更稳定更高效。因为每次装完系统都需要更换镜像源，还有其他乱七八糟的事情，所以把过程中的一些问题总结在这里。 apt 更换国内源 镜像源文件为：1&#x2F;etc&#x2F;apt&#x2F;sources.list 国内常用镜像源：12345678deb http:&#x2F;&#x2F;mirror">
+  <meta name="description" content="安装 MySQL 官方的.deb 文件 在官网下载.deb 文件。  安装： 1sudo dpkg -i .&#x2F;mysql-apt-config_0.8.17-1_all.deb  #注意自己的版本号 安装 MySQL 更新 apt 仓库： 1sudo apt-get update 安装 MySQL 服务端和客户端： 12sudo apt-get install mysql-server">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Debian 安装后的一些问题">
-<meta property="og:url" content="http://example.com/2020/10/25/Debian%20%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="Debian 安装 mysql">
+<meta property="og:url" content="http://example.com/2021/05/05/Debian%E5%AE%89%E8%A3%85mysql/index.html">
 <meta property="og:site_name" content="Macchiato&#39;s Blog">
-<meta property="og:description" content="写在前面我个人最常用的 Linux 发行版是 debian，因为我觉得它比 Ubuntu 更轻量更稳定更高效。因为每次装完系统都需要更换镜像源，还有其他乱七八糟的事情，所以把过程中的一些问题总结在这里。 apt 更换国内源 镜像源文件为：1&#x2F;etc&#x2F;apt&#x2F;sources.list 国内常用镜像源：12345678deb http:&#x2F;&#x2F;mirror">
+<meta property="og:description" content="安装 MySQL 官方的.deb 文件 在官网下载.deb 文件。  安装： 1sudo dpkg -i .&#x2F;mysql-apt-config_0.8.17-1_all.deb  #注意自己的版本号 安装 MySQL 更新 apt 仓库： 1sudo apt-get update 安装 MySQL 服务端和客户端： 12sudo apt-get install mysql-server">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/null">
-<meta property="article:published_time" content="2020-10-25T14:00:00.000Z">
-<meta property="article:modified_time" content="2021-02-27T16:07:44.090Z">
+<meta property="article:published_time" content="2021-05-05T12:22:00.000Z">
+<meta property="article:modified_time" content="2021-05-05T12:48:55.342Z">
 <meta property="article:author" content="Timmy Sun">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -108,17 +108,17 @@
     <article>
         <div class="kratos-hentry kratos-post-inner clearfix">
             <header class="kratos-entry-header">
-                <h1 class="kratos-entry-title text-center">Debian 安装后的一些问题</h1>
+                <h1 class="kratos-entry-title text-center">Debian 安装 mysql</h1>
                 
                 <div class="kratos-post-meta text-center">
                     <span>
-                        <i class="fa fa-calendar"></i> 2020-10-25
+                        <i class="fa fa-calendar"></i> 2021-05-05
                         <i class="fa fa-folder"></i> 分类 
                         <i class="fa fa-user"></i> 作者 Timmy Sun
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1133
+                            729
                         
                         字
                         
@@ -127,18 +127,36 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1614442064090"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1620218935342"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
-                <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>我个人最常用的 Linux 发行版是 debian，因为我觉得它比 Ubuntu 更轻量更稳定更高效。因为每次装完系统都需要更换镜像源，还有其他乱七八糟的事情，所以把过程中的一些问题总结在这里。</p>
-<h2 id="apt-更换国内源"><a href="#apt-更换国内源" class="headerlink" title="apt 更换国内源"></a>apt 更换国内源</h2><ul>
-<li>镜像源文件为：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;etc&#x2F;apt&#x2F;sources.list</span><br></pre></td></tr></table></figure></li>
-<li>国内常用镜像源：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster main non-free contrib</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster-updates main non-free contrib</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster-backports main non-free contrib</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian-security&#x2F; buster&#x2F;updates main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster-updates main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian&#x2F; buster-backports main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.163.com&#x2F;debian-security&#x2F; buster&#x2F;updates main non-free contrib</span><br></pre></td></tr></table></figure></li>
-<li>更新源：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
-<h2 id="public-GPG-key-error-“NO-PUBKEY"><a href="#public-GPG-key-error-“NO-PUBKEY" class="headerlink" title="public GPG key error (“NO_PUBKEY)"></a>public GPG key error (“NO_PUBKEY)</h2></li>
+                <h2 id="安装-MySQL-官方的-deb-文件"><a href="#安装-MySQL-官方的-deb-文件" class="headerlink" title="安装 MySQL 官方的.deb 文件"></a>安装 MySQL 官方的.deb 文件</h2><ol>
+<li><p>在<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/">官网</a>下载.deb 文件。</p>
+</li>
+<li><p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i .&#x2F;mysql-apt-config_0.8.17-1_all.deb  #注意自己的版本号</span><br></pre></td></tr></table></figure>
+<h2 id="安装-MySQL"><a href="#安装-MySQL" class="headerlink" title="安装 MySQL"></a>安装 MySQL</h2></li>
+<li><p>更新 apt 仓库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></li>
+<li><p>安装 MySQL 服务端和客户端：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server   #服务端</span><br><span class="line">sudo apt-get install mysql-client   #客户端</span><br></pre></td></tr></table></figure>
+<h2 id="Debug-dpkg-cannot-find-ldconfig-start-stop-daemon"><a href="#Debug-dpkg-cannot-find-ldconfig-start-stop-daemon" class="headerlink" title="Debug: dpkg cannot find ldconfig/start-stop-daemon"></a>Debug: dpkg cannot find ldconfig/start-stop-daemon</h2></li>
+</ol>
+<ul>
+<li><p>切换至 root 用户：<code>su</code></p>
+</li>
+<li><p>设置 root PATH：<code>vim /root/.bashrc</code></p>
+</li>
+<li><p>添加以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;local&#x2F;bin:&#x2F;usr&#x2F;sbin:&#x2F;usr&#x2F;bin:&#x2F;sbin:&#x2F;bin</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-的一些设置"><a href="#MySQL-的一些设置" class="headerlink" title="MySQL 的一些设置"></a>MySQL 的一些设置</h2></li>
+<li><p>登录：<code>mysql -u root -p</code></p>
+</li>
+<li><p>创建用户并设置密码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;;</span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;%&#39;WITH GRANT OPTION;     #给权限</span><br><span class="line">FLUSH PRIVILEGES;       #刷新权限</span><br></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key adv --keyserver hkp:&#x2F;&#x2F;pool.sks-keyservers.net:80 --recv-keys THE_MISSING_KEY_HERE    #THE_MISSING_KEY_HERE 用缺少的公钥替换</span><br></pre></td></tr></table></figure>
+
             </div>
             
                 <div class="kratos-copyright text-center clearfix">
@@ -191,7 +209,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2020/10/25/Debian%20%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/",
+                text: "http://example.com/2021/05/05/Debian%E5%AE%89%E8%A3%85mysql/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -203,11 +221,15 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2020/10/25/Debian%20%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/";
-            const title         = "「Debian 安装后的一些问题」";
-            const excerpt       = `写在前面我个人最常用的 Linux 发行版是 debian，因为我觉得它比 Ubuntu 更轻量更稳定更高效。因为每次装完系统都需要更换镜像源，还有其他乱七八糟的事情，所以把过程中的一些问题总结在这里。
-apt 更换国内源
-镜像源文件...`;
+            const hostUrl       = "http://example.com/2021/05/05/Debian%E5%AE%89%E8%A3%85mysql/";
+            const title         = "「Debian 安装 mysql」";
+            const excerpt       = `安装 MySQL 官方的.deb 文件
+在官网下载.deb 文件。
+
+安装：
+1sudo dpkg -i .&#x2F;mysql-apt-config_0.8.17-1_all.deb  #注意自己的版本号
+安装 MySQL
+更新 ...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -229,7 +251,7 @@ apt 更换国内源
                         <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2021-02-28</span>
+                    <span>最后编辑：2021-05-05</span>
                     </div>
                 </div>
             </footer>
@@ -237,10 +259,10 @@ apt 更换国内源
         
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
-                
-                <div class="nav-next clearfix">
-                    <a title=" apt 命令简介" href="/2020/11/08/apt命令简介/">下一篇 &gt;</a>
+                <div class="nav-previous clearfix">
+                    <a title=" Debian 连接惠普打印机并共享" href="/2021/01/24/Debian 连接惠普打印机并共享/">&lt; 上一篇</a>
                 </div>
+                
                 
             </nav>
         
